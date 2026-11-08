@@ -16,12 +16,13 @@
       "mode": "local"
     }
   },
-  "metadata": {
-    "tripId": "japan-2027-01",
-    "title": "日本旅行 2027年1月（东京·北海道）",
-    "language": "zh-CN",
-    "assets": {}
-  },
+ "metadata": {
+  "tripId": "japan-2027-01",
+  "title": "日本旅行 2027年1月（东京·北海道）",
+  "language": "zh-CN",
+  "timeZone": "Asia/Tokyo",
+  "assets": {}
+},
   "trip": {
     "status": "planned",
     "startDate": "2027-01-19",
