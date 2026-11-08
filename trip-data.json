@@ -4,12 +4,12 @@
   "config": {
     "schemaVersion": "1.0.0",
     "modules": {
-      "flights": false,
-      "overview": false,
-      "itinerary": false,
-      "todo": false,
+      "flights": true,
+      "overview": true,
+      "itinerary": true,
+      "todo": true,
       "driving": false,
-      "ledger": false
+      "ledger": true
     },
     "language": "zh-CN",
     "persistence": {
@@ -17,51 +17,1169 @@
     }
   },
   "metadata": {
-    "tripId": "unconfigured",
-    "title": "旅行计划",
+    "tripId": "japan-2027-01",
+    "title": "日本旅行 2027年1月（东京·北海道）",
     "language": "zh-CN",
     "assets": {}
   },
   "trip": {
-    "status": "uninitialized",
-    "startDate": null,
-    "endDate": null,
-    "dayCount": 0,
-    "nightCountAway": 0,
-    "countries": [],
-    "primaryDestinationCountries": [],
-    "citiesAndAreas": [],
-    "routeSummary": "",
-    "groupSize": null
+    "status": "planned",
+    "startDate": "2027-01-19",
+    "endDate": "2027-01-30",
+    "dayCount": 12,
+    "nightCountAway": 11,
+    "countries": ["日本"],
+    "primaryDestinationCountries": ["日本"],
+    "citiesAndAreas": ["东京", "镰仓", "江之岛", "札幌", "小樽", "钱函"],
+    "routeSummary": "广州 → 东京 → 札幌 → 小樽／钱函 → 札幌 → 东京 → 广州",
+    "groupSize": 2
   },
-  "flightJourneys": [],
-  "flights": [],
-  "accommodations": [],
+  "flightJourneys": [
+    {
+      "journeyId": "journey-1",
+      "from": "广州",
+      "to": "东京",
+      "type": "international",
+      "flights": ["flight-1"]
+    },
+    {
+      "journeyId": "journey-2",
+      "from": "东京",
+      "to": "札幌",
+      "type": "domestic",
+      "flights": ["flight-2"]
+    },
+    {
+      "journeyId": "journey-3",
+      "from": "札幌",
+      "to": "东京",
+      "type": "domestic",
+      "flights": ["flight-3"]
+    },
+    {
+      "journeyId": "journey-4",
+      "from": "东京",
+      "to": "广州",
+      "type": "international",
+      "flights": ["flight-4"]
+    }
+  ],
+  "flights": [
+    {
+      "flightId": "flight-1",
+      "date": "2027-01-19",
+      "flightNumber": "NH924",
+      "airline": "全日空（ANA）",
+      "from": {
+        "city": "广州",
+        "airport": "广州白云机场",
+        "iata": "CAN",
+        "terminal": "T3"
+      },
+      "to": {
+        "city": "东京",
+        "airport": "东京羽田机场",
+        "iata": "HND",
+        "terminal": null
+      },
+      "departureTime": "15:05",
+      "arrivalTime": "20:00",
+      "durationMinutes": 295,
+      "status": "confirmed",
+      "seats": ["31A", "31C"],
+      "seatNote": "两人座位已选好且相邻",
+      "baggage": {
+        "checked": {
+          "piecesPerPerson": 2,
+          "weightKgPerPiece": 23,
+          "sizeLimitCm": "单件三边之和不超过158cm"
+        },
+        "carryOn": {
+          "piecesPerPerson": 1,
+          "sizeCm": "55×40×25cm"
+        },
+        "personalItem": {
+          "piecesPerPerson": 1,
+          "sizeCm": "40×30×20cm，放在座椅下方"
+        },
+        "carryOnTotalWeightKg": 10,
+        "carryOnTotalNote": "随身行李与个人物品合计不超过10kg"
+      }
+    },
+    {
+      "flightId": "flight-2",
+      "date": "2027-01-24",
+      "flightNumber": "NH073",
+      "airline": "全日空（ANA）",
+      "from": {
+        "city": "东京",
+        "airport": "东京羽田机场",
+        "iata": "HND",
+        "terminal": "T2"
+      },
+      "to": {
+        "city": "札幌",
+        "airport": "新千岁机场",
+        "iata": "CTS",
+        "terminal": "D"
+      },
+      "departureTime": "17:00",
+      "arrivalTime": "18:35",
+      "durationMinutes": 95,
+      "status": "confirmed",
+      "seats": ["26C", "26B"],
+      "seatNote": "两人座位已选好且相邻",
+      "baggage": {
+        "checked": {
+          "piecesPerPerson": 2,
+          "weightKgPerPiece": 23,
+          "sizeLimitCm": "单件三边之和不超过158cm"
+        },
+        "carryOn": {
+          "piecesPerPerson": 1,
+          "sizeCm": "55×40×25cm"
+        },
+        "personalItem": {
+          "piecesPerPerson": 1,
+          "sizeCm": "40×30×20cm，放在座椅下方"
+        },
+        "carryOnTotalWeightKg": 10,
+        "carryOnTotalNote": "随身行李与个人物品合计不超过10kg"
+      }
+    },
+    {
+      "flightId": "flight-3",
+      "date": "2027-01-29",
+      "flightNumber": "NH4744",
+      "airline": "全日空（ANA）",
+      "operatedBy": "Air Do",
+      "operatedByFlightNumber": "HD044",
+      "from": {
+        "city": "札幌",
+        "airport": "新千岁机场",
+        "iata": "CTS",
+        "terminal": "D"
+      },
+      "to": {
+        "city": "东京",
+        "airport": "东京羽田机场",
+        "iata": "HND",
+        "terminal": "T2"
+      },
+      "departureTime": "21:45",
+      "arrivalTime": "23:30",
+      "durationMinutes": 105,
+      "status": "confirmed",
+      "seats": ["2F", "2E"],
+      "seatNote": "两人座位已选好且相邻",
+      "baggage": {
+        "checked": {
+          "piecesPerPerson": 2,
+          "weightKgPerPiece": 23,
+          "sizeLimitCm": "单件三边之和不超过158cm"
+        },
+        "carryOn": {
+          "piecesPerPerson": 1,
+          "sizeCm": "55×40×25cm"
+        },
+        "personalItem": {
+          "piecesPerPerson": 1,
+          "sizeCm": "40×30×20cm，放在座椅下方"
+        },
+        "carryOnTotalWeightKg": 10,
+        "carryOnTotalNote": "随身行李与个人物品合计不超过10kg"
+      },
+      "connectionNote": "1月30日09:20羽田飞广州。两段航班行李不直挂，需提取行李后重新办理托运。夜间休息地点及次日值机柜台开放时间待确认。"
+    },
+    {
+      "flightId": "flight-4",
+      "date": "2027-01-30",
+      "flightNumber": "NH923",
+      "airline": "全日空（ANA）",
+      "from": {
+        "city": "东京",
+        "airport": "东京羽田机场",
+        "iata": "HND",
+        "terminal": "T2"
+      },
+      "to": {
+        "city": "广州",
+        "airport": "广州白云机场",
+        "iata": "CAN",
+        "terminal": "T3"
+      },
+      "departureTime": "09:20",
+      "arrivalTime": "13:50",
+      "durationMinutes": 270,
+      "status": "confirmed",
+      "seats": ["31A", "31C"],
+      "seatNote": "两人座位已选好且相邻",
+      "baggage": {
+        "checked": {
+          "piecesPerPerson": 2,
+          "weightKgPerPiece": 23,
+          "sizeLimitCm": "单件三边之和不超过158cm"
+        },
+        "carryOn": {
+          "piecesPerPerson": 1,
+          "sizeCm": "55×40×25cm"
+        },
+        "personalItem": {
+          "piecesPerPerson": 1,
+          "sizeCm": "40×30×20cm，放在座椅下方"
+        },
+        "carryOnTotalWeightKg": 10,
+        "carryOnTotalNote": "随身行李与个人物品合计不超过10kg"
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "accommodationId": "hotel-1",
+      "name": "池袋阳光城王子大饭店",
+      "nameEn": "Sunshine City Prince Hotel",
+      "city": "东京",
+      "area": "池袋",
+      "checkIn": "2027-01-19",
+      "checkOut": "2027-01-24",
+      "nights": 5,
+      "roomType": "City Floor Small Double Room",
+      "maxGuests": 2,
+      "breakfast": "不含早餐",
+      "payment": {
+        "currency": "CNY",
+        "paidOnline": 2226.99,
+        "paidOnlinePerPerson": 1113.50,
+        "expectedOnSite": 0,
+        "total": 2226.99,
+        "totalPerPerson": 1113.50,
+        "paymentStatus": "已在线支付",
+        "confirmationReceived": true,
+        "confirmationNote": "订单确认邮件已收到并收藏"
+      }
+    },
+    {
+      "accommodationId": "hotel-2",
+      "name": "札幌中岛公园威斯特酒店",
+      "nameEn": "Hotel Vista Sapporo Nakajima Koen",
+      "city": "札幌",
+      "area": "中岛公园",
+      "checkIn": "2027-01-24",
+      "checkOut": "2027-01-29",
+      "nights": 5,
+      "roomType": "Semi-Double Non-Smoking",
+      "maxGuests": 2,
+      "breakfast": "不含早餐",
+      "payment": {
+        "currency": "CNY",
+        "paidOnline": 1923.20,
+        "paidOnlinePerPerson": 961.60,
+        "expectedOnSite": 125.70,
+        "expectedOnSitePerPerson": 62.85,
+        "total": 2048.90,
+        "totalPerPerson": 1024.45,
+        "paymentStatus": "部分已支付，预计现场支付尾款",
+        "confirmationReceived": true,
+        "confirmationNote": "订单确认邮件已收到并收藏。现场费用可能包含住宿税，入住时核实。",
+        "onSiteCurrencyNote": "出发前需准备对应日元现金"
+      }
+    }
+  ],
   "groundTransport": {
     "rentalCar": null,
     "rentalChecklist": [],
     "drivingNotes": [],
     "drivingReferenceLinks": [],
     "plannedRoadLegs": [],
-    "publicTransitAndRail": []
+    "publicTransitAndRail": [
+      {
+        "id": "gt-1",
+        "type": "note",
+        "title": "整体交通方式",
+        "description": "飞机、JR、地铁、公交、步行。不租车。"
+      },
+      {
+        "id": "gt-2",
+        "type": "ic-card",
+        "title": "Suica",
+        "description": "东京主要考虑Suica与单独购票。正在比较东京地铁券和Suica的成本。需确认Suica在札幌市区、小樽和钱函的适用范围。",
+        "status": "待确认适用范围"
+      },
+      {
+        "id": "gt-3",
+        "type": "paper-ticket",
+        "title": "JR实体纸质车票偏好",
+        "description": "希望每一段JR都尽可能购买实体纸质车票并保存。",
+        "routes": [
+          {
+            "from": "札幌",
+            "to": "小樽",
+            "note": "希望保存实体车票"
+          },
+          {
+            "from": "小樽",
+            "to": "钱函",
+            "note": "希望保存实体车票"
+          },
+          {
+            "from": "钱函",
+            "to": "札幌",
+            "note": "希望保存实体车票"
+          }
+        ],
+        "openQuestion": "想确认车站是否能购买分段车票。不要默认全程刷Suica。",
+        "status": "待确认"
+      },
+      {
+        "id": "gt-4",
+        "type": "transfer",
+        "title": "1月19日 羽田机场 → 池袋酒店",
+        "date": "2027-01-19",
+        "costNote": "交通参考约1000日元／人",
+        "status": "参考"
+      },
+      {
+        "id": "gt-5",
+        "type": "transfer",
+        "title": "1月20日 池袋 → 浅草",
+        "date": "2027-01-20",
+        "costNote": "交通参考约387日元",
+        "status": "参考"
+      },
+      {
+        "id": "gt-6",
+        "type": "rail",
+        "title": "1月21日 池袋 → 藤泽（镰仓）",
+        "date": "2027-01-21",
+        "description": "考虑JR前往藤泽。",
+        "status": "计划中"
+      },
+      {
+        "id": "gt-7",
+        "type": "rail",
+        "title": "江之岛电车",
+        "date": "2027-01-21",
+        "description": "体验江之岛电车，考虑购买江之岛电车一日券。",
+        "status": "待确认"
+      },
+      {
+        "id": "gt-8",
+        "type": "rail",
+        "title": "1月26日 札幌 → 小樽 → 钱函 → 札幌",
+        "date": "2027-01-26",
+        "description": "每一段JR尽量购买实体纸质车票并保存。",
+        "status": "计划中"
+      }
+    ]
   },
-  "days": [],
-  "places": [],
-  "restaurants": [],
+  "days": [
+    {
+      "dayId": "day-01",
+      "date": "2027-01-19",
+      "dayNumber": 1,
+      "title": "抵达东京",
+      "city": "东京",
+      "summary": "广州起飞，抵达羽田机场，前往池袋酒店办理入住。",
+      "items": [
+        {
+          "type": "flight",
+          "title": "广州 → 东京 航班 NH924",
+          "time": "15:05—20:00",
+          "flightId": "flight-1",
+          "noNavigation": true
+        },
+        {
+          "type": "transfer",
+          "title": "羽田机场 → 池袋酒店",
+          "description": "交通参考约1000日元／人",
+          "costNote": "约1000日元／人"
+        },
+        {
+          "type": "check-in",
+          "title": "办理入住 池袋阳光城王子大饭店",
+          "accommodationId": "hotel-1"
+        },
+        {
+          "type": "restaurant",
+          "title": "吃晚饭",
+          "note": "附近餐饮"
+        },
+        {
+          "type": "rest",
+          "title": "休息",
+          "noNavigation": true
+        }
+      ]
+    },
+    {
+      "dayId": "day-02",
+      "date": "2027-01-20",
+      "dayNumber": 2,
+      "title": "浅草寺、东京塔、涩谷",
+      "city": "东京",
+      "summary": "浅草和服体验，浅草寺周边游玩，之后东京塔、涩谷P5R相关地点。",
+      "items": [
+        {
+          "type": "rest",
+          "title": "起床、化妆",
+          "time": "07:00",
+          "noNavigation": true
+        },
+        {
+          "type": "transfer",
+          "title": "池袋 → 浅草",
+          "time": "08:30",
+          "costNote": "交通参考约387日元"
+        },
+        {
+          "type": "activity",
+          "title": "花筏和服店预约",
+          "time": "09:00",
+          "description": "预计选择和服、换装约1—1.5小时。和服预约邮件已收到，现场选择套餐并付款。未选择摄影服务。",
+          "note": "预约人数以订单为准，不要擅自认定两人都预约。准确人数及套餐待确认。",
+          "status": "已预约，现场付款"
+        },
+        {
+          "type": "attraction",
+          "title": "浅草寺及周边游玩",
+          "time": "预计15:00—16:00结束和服活动"
+        },
+        {
+          "type": "restaurant",
+          "title": "らぁめん めん○（店名待确认）",
+          "note": "参考约500日元／碗",
+          "status": "店名尚未完整确认"
+        },
+        {
+          "type": "restaurant",
+          "title": "塩パン屋 パン・メゾン すみだ浅草通り",
+          "status": "已收藏"
+        },
+        {
+          "type": "attraction",
+          "title": "东京塔",
+          "note": "和服活动结束后前往"
+        },
+        {
+          "type": "attraction",
+          "title": "涩谷",
+          "note": "安排《女神异闻录5》（P5R）相关地点"
+        }
+      ]
+    },
+    {
+      "dayId": "day-03",
+      "date": "2027-01-21",
+      "dayNumber": 3,
+      "title": "镰仓＋江之岛",
+      "city": "镰仓·江之岛",
+      "summary": "池袋出发前往藤泽，游览镰仓小町通、江之岛，体验江之岛电车。",
+      "items": [
+        {
+          "type": "rail",
+          "title": "池袋 → 藤泽",
+          "description": "考虑JR前往藤泽"
+        },
+        {
+          "type": "attraction",
+          "title": "镰仓小町通"
+        },
+        {
+          "type": "attraction",
+          "title": "江之岛"
+        },
+        {
+          "type": "rail",
+          "title": "江之岛电车",
+          "description": "体验江之岛电车，考虑购买江之岛电车一日券。"
+        },
+        {
+          "type": "note",
+          "title": "行程偏好",
+          "description": "倾向直接返回东京。不增加横滨行程，避免太疲惫。不希望购买会迫使自己按原路线返回的宽泛周游券。",
+          "noNavigation": true
+        }
+      ]
+    },
+    {
+      "dayId": "day-04",
+      "date": "2027-01-22",
+      "dayNumber": 4,
+      "title": "富士山一日游",
+      "city": "富士山周边",
+      "summary": "已选中候选一日游团，尚未预订，计划2026年12月预订。",
+      "items": [
+        {
+          "type": "tour",
+          "title": "富士山一日游（候选团）",
+          "description": "已选中约268元人民币／人的候选团，两人合计约536元。集合地点：新宿西口。尚未预订，计划2026年12月预订。",
+          "possibleStops": ["山中湖", "忍野八海", "河口湖大石公园"],
+          "costNote": "约268元／人，两人约536元",
+          "status": "待预订",
+          "note": "最终路线以实际购买的团为准。不要写成已预订。"
+        }
+      ]
+    },
+    {
+      "dayId": "day-05",
+      "date": "2027-01-23",
+      "dayNumber": 5,
+      "title": "日暮里、秋叶原、银座",
+      "city": "东京",
+      "summary": "上午日暮里，下午秋叶原，晚上银座。",
+      "items": [
+        {
+          "type": "attraction",
+          "title": "日暮里",
+          "time": "上午"
+        },
+        {
+          "type": "attraction",
+          "title": "秋叶原",
+          "time": "下午"
+        },
+        {
+          "type": "attraction",
+          "title": "银座",
+          "time": "晚上"
+        }
+      ]
+    },
+    {
+      "dayId": "day-06",
+      "date": "2027-01-24",
+      "dayNumber": 6,
+      "title": "池袋＋前往北海道",
+      "city": "东京 → 札幌",
+      "summary": "白天池袋活动，退房后行李寄存，下午飞新千岁，前往札幌酒店入住。",
+      "items": [
+        {
+          "type": "activity",
+          "title": "池袋白天活动"
+        },
+        {
+          "type": "check-out",
+          "title": "池袋阳光城王子大饭店退房",
+          "accommodationId": "hotel-1"
+        },
+        {
+          "type": "note",
+          "title": "行李寄存",
+          "description": "方案1：询问池袋酒店是否允许退房后寄存。方案2：池袋站附近投币储物柜。",
+          "status": "待确认",
+          "noNavigation": true
+        },
+        {
+          "type": "flight",
+          "title": "东京 → 札幌 航班 NH073",
+          "time": "17:00—18:35",
+          "flightId": "flight-2",
+          "noNavigation": true
+        },
+        {
+          "type": "transfer",
+          "title": "新千岁机场 → 札幌酒店"
+        },
+        {
+          "type": "check-in",
+          "title": "办理入住 札幌中岛公园威斯特酒店",
+          "accommodationId": "hotel-2"
+        }
+      ]
+    },
+    {
+      "dayId": "day-07",
+      "date": "2027-01-25",
+      "dayNumber": 7,
+      "title": "北海道神宫、白色恋人公园、札幌市区",
+      "city": "札幌",
+      "summary": "北海道神宫、白色恋人公园、札幌诹访神社、旧本厅舍、钟楼、电视塔、大通公园。",
+      "items": [
+        {
+          "type": "attraction",
+          "title": "北海道神宫"
+        },
+        {
+          "type": "attraction",
+          "title": "白色恋人公园",
+          "description": "冬季灯光活动：2026年12月1日至2027年3月31日。灯光时间16:00—19:00。户外灯光区域免费。心形灯光每小时15分和45分有彩色闪烁效果。2027年正值白色恋人50周年相关活动。",
+          "note": "出发前需要再次确认开放时间及天气。"
+        },
+        {
+          "type": "attraction",
+          "title": "札幌诹访神社"
+        },
+        {
+          "type": "attraction",
+          "title": "北海道厅旧本厅舍"
+        },
+        {
+          "type": "attraction",
+          "title": "札幌市钟楼"
+        },
+        {
+          "type": "attraction",
+          "title": "札幌电视塔"
+        },
+        {
+          "type": "attraction",
+          "title": "大通公园"
+        },
+        {
+          "type": "note",
+          "title": "游览顺序",
+          "description": "当天具体游览顺序和时间尚未确定。",
+          "noNavigation": true
+        }
+      ]
+    },
+    {
+      "dayId": "day-08",
+      "date": "2027-01-26",
+      "dayNumber": 8,
+      "title": "小樽＋钱函一日游",
+      "city": "小樽·钱函",
+      "summary": "札幌出发游览小樽、钱函，返回札幌。每段JR尽量购买实体车票。",
+      "items": [
+        {
+          "type": "rail",
+          "title": "札幌 → 小樽",
+          "note": "希望保存实体纸质车票"
+        },
+        {
+          "type": "attraction",
+          "title": "小樽"
+        },
+        {
+          "type": "rail",
+          "title": "小樽 → 钱函",
+          "note": "希望保存实体纸质车票"
+        },
+        {
+          "type": "attraction",
+          "title": "钱函"
+        },
+        {
+          "type": "rail",
+          "title": "钱函 → 札幌",
+          "note": "希望保存实体纸质车票"
+        },
+        {
+          "type": "note",
+          "title": "车票说明",
+          "description": "想确认车站是否能购买分段车票。不要默认全程刷Suica。",
+          "noNavigation": true
+        }
+      ]
+    },
+    {
+      "dayId": "day-09",
+      "date": "2027-01-27",
+      "dayNumber": 9,
+      "title": "北海道大学＋狸小路",
+      "city": "札幌",
+      "summary": "白天游览北海道大学，之后前往狸小路购物。",
+      "items": [
+        {
+          "type": "attraction",
+          "title": "北海道大学",
+          "time": "白天"
+        },
+        {
+          "type": "shopping",
+          "title": "狸小路购物",
+          "time": "之后"
+        },
+        {
+          "type": "note",
+          "title": "时间安排",
+          "description": "具体时间和餐饮待安排。",
+          "noNavigation": true
+        }
+      ]
+    },
+    {
+      "dayId": "day-10",
+      "date": "2027-01-28",
+      "dayNumber": 10,
+      "title": "滑雪／玩雪＋温泉",
+      "city": "札幌周边（待确认）",
+      "summary": "两人均为滑雪初学者，偏好雪圈、雪橇、轻松玩雪项目，可考虑初级滑雪体验。地点尚未确认。",
+      "items": [
+        {
+          "type": "activity",
+          "title": "玩雪项目（地点待确认）",
+          "description": "两人均为滑雪初学者，没有滑雪经验。希望低成本、公共交通方便。更偏好雪圈、雪橇、轻松玩雪项目，可以考虑初级滑雪体验。",
+          "candidates": [
+            "泷野雪世界（Takino Snow World）——尚未确认",
+            "真驹内泷野灵园——附近游览候选，尚未确认"
+          ],
+          "status": "待确认"
+        },
+        {
+          "type": "activity",
+          "title": "温泉（地点待确认）",
+          "candidates": [
+            "定山溪温泉——尚未确认",
+            "丰平峡温泉——尚未确认"
+          ],
+          "status": "待确认"
+        },
+        {
+          "type": "note",
+          "title": "明确排除",
+          "description": "不去朝里。不去朝里川温泉滑雪场。",
+          "noNavigation": true
+        }
+      ]
+    },
+    {
+      "dayId": "day-11",
+      "date": "2027-01-29",
+      "dayNumber": 11,
+      "title": "薄野＋狸小路＋返回东京",
+      "city": "札幌 → 东京",
+      "summary": "白天薄野、狸小路第二次购物，不要安排过于紧凑。晚上飞东京羽田。",
+      "items": [
+        {
+          "type": "attraction",
+          "title": "薄野",
+          "time": "白天"
+        },
+        {
+          "type": "shopping",
+          "title": "狸小路第二次购物",
+          "time": "白天"
+        },
+        {
+          "type": "note",
+          "title": "节奏提醒",
+          "description": "不要安排得过于紧凑。",
+          "noNavigation": true
+        },
+        {
+          "type": "check-out",
+          "title": "札幌中岛公园威斯特酒店退房",
+          "accommodationId": "hotel-2"
+        },
+        {
+          "type": "flight",
+          "title": "札幌 → 东京 航班 NH4744（实际承运 Air Do HD044）",
+          "time": "21:45—23:30",
+          "flightId": "flight-3",
+          "noNavigation": true
+        },
+        {
+          "type": "note",
+          "title": "抵达后衔接",
+          "description": "23:30抵达东京羽田机场。需要提取行李，为次日国际航班重新办理托运。夜间休息地点及1月30日值机柜台开放时间待确认。",
+          "noNavigation": true
+        }
+      ]
+    },
+    {
+      "dayId": "day-12",
+      "date": "2027-01-30",
+      "dayNumber": 12,
+      "title": "返回广州",
+      "city": "东京 → 广州",
+      "summary": "09:20羽田起飞，13:50抵达广州白云机场，日本旅行结束。",
+      "items": [
+        {
+          "type": "flight",
+          "title": "东京 → 广州 航班 NH923",
+          "time": "09:20—13:50",
+          "flightId": "flight-4",
+          "noNavigation": true
+        },
+        {
+          "type": "note",
+          "title": "日本旅行结束",
+          "description": "13:50抵达广州白云机场。",
+          "noNavigation": true
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "placeId": "place-asakusa",
+      "name": "浅草寺",
+      "city": "东京",
+      "type": "attraction",
+      "days": ["day-02"]
+    },
+    {
+      "placeId": "place-tokyo-tower",
+      "name": "东京塔",
+      "city": "东京",
+      "type": "attraction",
+      "days": ["day-02"]
+    },
+    {
+      "placeId": "place-shibuya",
+      "name": "涩谷",
+      "city": "东京",
+      "type": "attraction",
+      "note": "《女神异闻录5》（P5R）相关地点",
+      "days": ["day-02"]
+    },
+    {
+      "placeId": "place-kamakura-komachi",
+      "name": "镰仓小町通",
+      "city": "镰仓",
+      "type": "attraction",
+      "days": ["day-03"]
+    },
+    {
+      "placeId": "place-enoshima",
+      "name": "江之岛",
+      "city": "江之岛",
+      "type": "attraction",
+      "days": ["day-03"]
+    },
+    {
+      "placeId": "place-nippori",
+      "name": "日暮里",
+      "city": "东京",
+      "type": "attraction",
+      "days": ["day-05"]
+    },
+    {
+      "placeId": "place-akihabara",
+      "name": "秋叶原",
+      "city": "东京",
+      "type": "attraction",
+      "days": ["day-05"]
+    },
+    {
+      "placeId": "place-ginza",
+      "name": "银座",
+      "city": "东京",
+      "type": "attraction",
+      "days": ["day-05"]
+    },
+    {
+      "placeId": "place-ikebukuro",
+      "name": "池袋",
+      "city": "东京",
+      "type": "area",
+      "days": ["day-01", "day-06"]
+    },
+    {
+      "placeId": "place-hokkaido-jingu",
+      "name": "北海道神宫",
+      "city": "札幌",
+      "type": "attraction",
+      "days": ["day-07"]
+    },
+    {
+      "placeId": "place-shiroi-koibito-park",
+      "name": "白色恋人公园",
+      "city": "札幌",
+      "type": "attraction",
+      "days": ["day-07"],
+      "note": "冬季灯光活动 2026-12-01 至 2027-03-31，灯光时间 16:00—19:00，户外灯光区免费。"
+    },
+    {
+      "placeId": "place-sapporo-suwa-shrine",
+      "name": "札幌诹访神社",
+      "city": "札幌",
+      "type": "attraction",
+      "days": ["day-07"]
+    },
+    {
+      "placeId": "place-former-hokkaido-gov",
+      "name": "北海道厅旧本厅舍",
+      "city": "札幌",
+      "type": "attraction",
+      "days": ["day-07"]
+    },
+    {
+      "placeId": "place-sapporo-clock-tower",
+      "name": "札幌市钟楼",
+      "city": "札幌",
+      "type": "attraction",
+      "days": ["day-07"]
+    },
+    {
+      "placeId": "place-sapporo-tv-tower",
+      "name": "札幌电视塔",
+      "city": "札幌",
+      "type": "attraction",
+      "days": ["day-07"]
+    },
+    {
+      "placeId": "place-odori-park",
+      "name": "大通公园",
+      "city": "札幌",
+      "type": "attraction",
+      "days": ["day-07"]
+    },
+    {
+      "placeId": "place-otaru",
+      "name": "小樽",
+      "city": "小樽",
+      "type": "attraction",
+      "days": ["day-08"]
+    },
+    {
+      "placeId": "place-zenso",
+      "name": "钱函",
+      "city": "钱函",
+      "type": "attraction",
+      "days": ["day-08"]
+    },
+    {
+      "placeId": "place-hokkaido-univ",
+      "name": "北海道大学",
+      "city": "札幌",
+      "type": "attraction",
+      "days": ["day-09"]
+    },
+    {
+      "placeId": "place-tanukikoji",
+      "name": "狸小路",
+      "city": "札幌",
+      "type": "shopping",
+      "days": ["day-09", "day-11"]
+    },
+    {
+      "placeId": "place-susukino",
+      "name": "薄野",
+      "city": "札幌",
+      "type": "area",
+      "days": ["day-11"]
+    },
+    {
+      "placeId": "place-haneda",
+      "name": "东京羽田机场",
+      "city": "东京",
+      "type": "airport",
+      "iata": "HND",
+      "days": ["day-01", "day-02", "day-04", "day-06", "day-11", "day-12"]
+    },
+    {
+      "placeId": "place-new-chitose",
+      "name": "新千岁机场",
+      "city": "札幌",
+      "type": "airport",
+      "iata": "CTS",
+      "days": ["day-06", "day-11"]
+    }
+  ],
+  "restaurants": [
+    {
+      "restaurantId": "rest-1",
+      "name": "らぁめん めん○",
+      "city": "东京",
+      "area": "浅草",
+      "note": "店名尚未完整确认，参考约500日元／碗",
+      "status": "店名待确认"
+    },
+    {
+      "restaurantId": "rest-2",
+      "name": "塩パン屋 パン・メゾン すみだ浅草通り",
+      "city": "东京",
+      "area": "浅草",
+      "status": "已收藏"
+    }
+  ],
   "bookingsAndTickets": [],
   "ticketPlanning": {
     "statusStorage": "local",
     "statusStorageNote": "门票状态默认只保存在当前浏览器。",
-    "items": []
+    "items": [
+      {
+        "ticketId": "ticket-1",
+        "title": "富士山一日游",
+        "type": "tour",
+        "date": "2027-01-22",
+        "status": "待预订",
+        "candidatePricePerPerson": 268,
+        "candidatePriceCurrency": "CNY",
+        "candidateTotalForTwo": 536,
+        "note": "已选中候选团，计划2026年12月预订。集合地点新宿西口。最终路线以实际购买的团为准。不要写成已预订。"
+      },
+      {
+        "ticketId": "ticket-2",
+        "title": "浅草和服（花筏和服店）",
+        "type": "experience",
+        "date": "2027-01-20",
+        "status": "已预约，现场付款",
+        "note": "和服预约邮件已收到，现场选择套餐并付款。未选择摄影服务。预约人数以订单为准。"
+      },
+      {
+        "ticketId": "ticket-3",
+        "title": "江之岛电车一日券",
+        "type": "transit-pass",
+        "date": "2027-01-21",
+        "status": "待确认是否购买",
+        "note": "考虑购买江之岛电车一日券。"
+      },
+      {
+        "ticketId": "ticket-4",
+        "title": "白色恋人公园",
+        "type": "attraction",
+        "date": "2027-01-25",
+        "status": "待确认",
+        "note": "户外灯光区域免费。出发前再次确认开放时间及天气。"
+      },
+      {
+        "ticketId": "ticket-5",
+        "title": "1月28日玩雪地点",
+        "type": "activity",
+        "date": "2027-01-28",
+        "status": "待确认",
+        "note": "候选：泷野雪世界、真驹内泷野灵园。两人均为滑雪初学者，偏好雪圈、雪橇等轻松玩雪项目。"
+      },
+      {
+        "ticketId": "ticket-6",
+        "title": "1月28日温泉地点",
+        "type": "activity",
+        "date": "2027-01-28",
+        "status": "待确认",
+        "note": "候选：定山溪温泉、丰平峡温泉。"
+      }
+    ]
   },
   "preTrip": {
-    "packingItems": [],
-    "preparationsExplicitlyMentioned": [],
-    "missingNote": ""
+    "packingItems": [
+      {
+        "id": "pack-1",
+        "name": "护照收纳包",
+        "category": "证件收纳",
+        "budget": "50元人民币以内",
+        "note": "长款设计，需要横向票据收纳空间。放置护照、长条登机牌、现金、银行卡、SIM卡、照片和日本硬币。希望旅行结束后也能长期使用。",
+        "status": "待购买"
+      },
+      {
+        "id": "pack-2",
+        "name": "充电设备",
+        "category": "电子设备",
+        "items": ["手机（iPhone 16 Pro）", "CCD相机", "充电宝"],
+        "note": "需要确认充电器在日本的电压、插头及功率兼容性。",
+        "status": "待确认兼容性"
+      },
+      {
+        "id": "pack-3",
+        "name": "行李箱",
+        "category": "行李",
+        "note": "需确认两人实际携带的行李箱数量、尺寸和重量。",
+        "status": "待确认"
+      },
+      {
+        "id": "pack-4",
+        "name": "日本实体SIM卡",
+        "category": "通讯",
+        "note": "两人都计划购买。品牌和流量套餐尚未确定。",
+        "status": "待购买"
+      },
+      {
+        "id": "pack-5",
+        "name": "日元现金",
+        "category": "支付",
+        "note": "出发前准备札幌酒店预计现场支付的125.70元人民币对应日元。",
+        "status": "待准备"
+      }
+    ],
+    "preparationsExplicitlyMentioned": [
+      {
+        "id": "prep-1",
+        "title": "日本签证申请",
+        "description": "两人的日本签证申请材料已寄出，等待结果。",
+        "status": "等待结果"
+      },
+      {
+        "id": "prep-2",
+        "title": "Visit Japan Web 入境二维码",
+        "description": "两人出发前填写 Visit Japan Web，生成入境二维码。",
+        "status": "出发前办理"
+      },
+      {
+        "id": "prep-3",
+        "title": "旅行保险",
+        "description": "两人购买旅行保险，确认医疗、紧急救援、航班延误、行李保障及雪地活动免责条款。",
+        "status": "待购买"
+      },
+      {
+        "id": "prep-4",
+        "title": "日本实体SIM卡",
+        "description": "两人购买日本实体SIM卡，品牌和流量套餐尚未确定。",
+        "status": "待购买"
+      },
+      {
+        "id": "prep-5",
+        "title": "申请招商银行Mastercard",
+        "description": "计划申请，尚未申请。",
+        "status": "待申请"
+      },
+      {
+        "id": "prep-6",
+        "title": "确认广东农商银行储蓄卡境外功能",
+        "description": "确认境外POS功能、手续费、额度及开通情况。",
+        "status": "待确认"
+      },
+      {
+        "id": "prep-7",
+        "title": "预订富士山一日游",
+        "description": "计划2026年12月预订。",
+        "status": "待预订"
+      },
+      {
+        "id": "prep-8",
+        "title": "联系池袋酒店确认行李寄存",
+        "description": "确认1月24日退房后是否可以寄存行李。",
+        "status": "待确认"
+      },
+      {
+        "id": "prep-9",
+        "title": "确定1月28日玩雪地点和温泉地点",
+        "description": "候选地点尚未确认。",
+        "status": "待确认"
+      },
+      {
+        "id": "prep-10",
+        "title": "确认1月29日深夜羽田机场休息安排",
+        "description": "夜间休息地点尚未确认。",
+        "status": "待确认"
+      },
+      {
+        "id": "prep-11",
+        "title": "确认1月30日值机柜台开放时间",
+        "description": "值机柜台开放时间尚未确认。",
+        "status": "待确认"
+      },
+      {
+        "id": "prep-12",
+        "title": "确认札幌、小樽、钱函各段实体车票购买方式",
+        "description": "想确认车站是否能购买分段车票。",
+        "status": "待确认"
+      },
+      {
+        "id": "prep-13",
+        "title": "确认两人实际行李箱数量、尺寸和重量",
+        "description": "根据行李额度（托运2件×23kg，随身1件+个人物品1件≤10kg）确认。",
+        "status": "待确认"
+      },
+      {
+        "id": "prep-14",
+        "title": "出发前检查证件和订单",
+        "description": "检查护照、签证、机票和酒店订单。",
+        "status": "出发前检查"
+      },
+      {
+        "id": "prep-15",
+        "title": "准备札幌酒店现场支付日元",
+        "description": "准备预计现场支付的125.70元人民币对应日元。",
+        "status": "待准备"
+      }
+    ],
+    "missingNote": "富士山一日游最终产品与路线、1月28日玩雪及温泉地点、池袋酒店行李寄存、羽田深夜休息安排、1月30日值机时间、实体车票购买方式、Suica适用范围、旅行保险与SIM卡套餐、Mastercard申请结果、行李箱数量尺寸重量、1月20日和服预约人数及套餐均待确认。"
   },
   "mapLinks": {
     "providedGoogleMapsLinks": [],
-    "note": "",
+    "note": "未提供Google Maps链接，不凭空生成坐标或地图链接。地点导航由网页端基于名称自行处理。",
     "cityLevelNavigationDisabled": false,
     "navigationPolicy": {
       "noNavigationTypes": [
@@ -83,7 +1201,168 @@
     },
     "navigationPlaces": []
   },
-  "issuesAndUncertainties": [],
+  "issuesAndUncertainties": [
+    {
+      "id": "issue-1",
+      "title": "富士山一日游最终产品、路线和预订状态",
+      "status": "待确认",
+      "note": "已选中约268元/人的候选团，计划2026年12月预订，尚未预订。"
+    },
+    {
+      "id": "issue-2",
+      "title": "1月28日玩雪地点及温泉地点",
+      "status": "待确认",
+      "note": "玩雪候选：泷野雪世界、真驹内泷野灵园。温泉候选：定山溪温泉、丰平峡温泉。"
+    },
+    {
+      "id": "issue-3",
+      "title": "1月24日池袋酒店是否允许退房后寄存行李",
+      "status": "待确认",
+      "note": "需联系酒店确认。备用方案为池袋站附近投币储物柜。"
+    },
+    {
+      "id": "issue-4",
+      "title": "1月29日深夜羽田机场休息安排",
+      "status": "待确认",
+      "note": "23:30抵达羽田，次日09:20飞广州，夜间休息地点待确认。"
+    },
+    {
+      "id": "issue-5",
+      "title": "1月30日值机柜台开放时间",
+      "status": "待确认"
+    },
+    {
+      "id": "issue-6",
+      "title": "札幌、小樽、钱函各段实体车票购买方式",
+      "status": "待确认",
+      "note": "想确认车站是否能购买分段车票，不要默认全程刷Suica。"
+    },
+    {
+      "id": "issue-7",
+      "title": "Suica在札幌、小樽、钱函的具体适用范围",
+      "status": "待确认"
+    },
+    {
+      "id": "issue-8",
+      "title": "旅行保险和日本实体SIM卡套餐",
+      "status": "待确认"
+    },
+    {
+      "id": "issue-9",
+      "title": "Mastercard申请结果",
+      "status": "待申请"
+    },
+    {
+      "id": "issue-10",
+      "title": "两人实际行李箱数量、尺寸和重量",
+      "status": "待确认"
+    },
+    {
+      "id": "issue-11",
+      "title": "1月20日和服预约的准确人数及套餐",
+      "status": "待确认",
+      "note": "预约人数以订单为准，不要擅自认定两人都预约。"
+    },
+    {
+      "id": "issue-12",
+      "title": "招商银行Mastercard尚未申请",
+      "status": "待申请"
+    },
+    {
+      "id": "issue-13",
+      "title": "广东农商银行储蓄卡境外POS功能、手续费及限额",
+      "status": "待确认"
+    },
+    {
+      "id": "issue-14",
+      "title": "每人当地预算约8500元人民币尚未最终确认",
+      "status": "待确认",
+      "note": "该金额为初步预算，不包括机票、酒店、签证和电话卡。"
+    }
+  ],
+  "ledger": {
+    "currency": {
+      "primary": "CNY",
+      "secondary": "JPY"
+    },
+    "exchangeRate": {
+      "mode": "manual-or-realtime",
+      "note": "支持实时或手动汇率换算。"
+    },
+    "split": {
+      "mode": "per-person",
+      "people": 2,
+      "note": "支持两人均摊，区分个人消费和共同消费。"
+    },
+    "budget": {
+      "perPersonLocal": 8500,
+      "perPersonLocalCurrency": "CNY",
+      "perPersonLocalScope": "日本当地交通、餐饮、购物等",
+      "perPersonLocalExcludes": "不包括机票、酒店、签证和电话卡",
+      "perPersonLocalStatus": "初步预算，尚未最终确认",
+      "perPersonLocalNote": "该金额为初步考虑，尚未最终确认。"
+    },
+    "confirmedExpenses": [
+      {
+        "id": "exp-1",
+        "title": "东京池袋酒店（5晚）",
+        "date": "2027-01-19",
+        "currency": "CNY",
+        "amount": 2226.99,
+        "amountPerPerson": 1113.50,
+        "category": "住宿",
+        "paymentStatus": "已在线支付",
+        "shared": true
+      },
+      {
+        "id": "exp-2",
+        "title": "札幌中岛公园酒店（5晚，已付部分）",
+        "date": "2027-01-24",
+        "currency": "CNY",
+        "amount": 1923.20,
+        "amountPerPerson": 961.60,
+        "category": "住宿",
+        "paymentStatus": "已在线支付",
+        "shared": true
+      },
+      {
+        "id": "exp-3",
+        "title": "札幌酒店预计现场支付（尾款，可能含住宿税）",
+        "date": "2027-01-24",
+        "currency": "CNY",
+        "amount": 125.70,
+        "amountPerPerson": 62.85,
+        "category": "住宿",
+        "paymentStatus": "预计现场支付，尚未支付",
+        "shared": true,
+        "note": "不要写成已支付。入住时核实是否含住宿税。"
+      }
+    ],
+    "plannedExpenses": [
+      {
+        "id": "plan-1",
+        "title": "富士山一日游（候选）",
+        "date": "2027-01-22",
+        "currency": "CNY",
+        "amountPerPerson": 268,
+        "amountForTwo": 536,
+        "category": "门票/活动",
+        "paymentStatus": "尚未预订，未支付",
+        "note": "候选价格，最终以实际购买为准。"
+      }
+    ],
+    "summary": {
+      "hotelsTotal": 4275.89,
+      "hotelsTotalCurrency": "CNY",
+      "hotelsTotalPerPerson": 2137.95,
+      "hotelsNote": "两家酒店预计总计4275.89元，每人约2137.95元。含札幌预计现场支付125.70元（尚未支付）。"
+    },
+    "categories": ["餐饮", "交通", "购物", "门票", "住宿", "活动", "其他"],
+    "dailyStatistics": {
+      "enabled": true,
+      "note": "支持每日消费统计、新增、修改、删除消费记录。"
+    }
+  },
   "map": {
     "schemaVersion": "1.0-lite",
     "mapMode": "template-auto",
