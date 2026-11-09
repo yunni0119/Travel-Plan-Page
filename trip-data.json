@@ -16,78 +16,100 @@
       "mode": "local"
     }
   },
- "metadata": {
-  "tripId": "japan-2027-01",
-  "title": "日本旅行 2027年1月（东京·北海道）",
-  "language": "zh-CN",
-  "timeZone": "Asia/Tokyo",
-  "assets": {}
-},
+  "metadata": {
+    "tripId": "japan-2027-01",
+    "title": "日本旅行 2027年1月｜东京与北海道",
+    "language": "zh-CN",
+    "timeZone": "Asia/Tokyo",
+    "assets": {
+      "routeMaps": [
+        "assets/maps/templates/template-06-upland-basin.webp"
+      ]
+    }
+  },
   "trip": {
-    "status": "planned",
+    "status": "draft",
     "startDate": "2027-01-19",
     "endDate": "2027-01-30",
     "dayCount": 12,
     "nightCountAway": 11,
-    "countries": ["日本"],
-    "primaryDestinationCountries": ["日本"],
-    "citiesAndAreas": ["东京", "镰仓", "江之岛", "札幌", "小樽", "钱函"],
+    "countries": [
+      "日本"
+    ],
+    "primaryDestinationCountries": [
+      "JP"
+    ],
+    "citiesAndAreas": [
+      "东京",
+      "镰仓",
+      "江之岛",
+      "札幌",
+      "小樽",
+      "钱函"
+    ],
     "routeSummary": "广州 → 东京 → 札幌 → 小樽／钱函 → 札幌 → 东京 → 广州",
-    "groupSize": 2
+    "groupSize": 2,
+    "primaryDestinationName": "日本",
+    "heroTitle": "日本"
   },
   "flightJourneys": [
     {
-      "journeyId": "journey-1",
-      "from": "广州",
-      "to": "东京",
-      "type": "international",
-      "flights": ["flight-1"]
+      "id": "journey-1",
+      "title": "广州 → 东京",
+      "status": "confirmed"
     },
     {
-      "journeyId": "journey-2",
-      "from": "东京",
-      "to": "札幌",
-      "type": "domestic",
-      "flights": ["flight-2"]
+      "id": "journey-2",
+      "title": "东京 → 札幌",
+      "status": "confirmed"
     },
     {
-      "journeyId": "journey-3",
-      "from": "札幌",
-      "to": "东京",
-      "type": "domestic",
-      "flights": ["flight-3"]
+      "id": "journey-3",
+      "title": "札幌 → 东京",
+      "status": "confirmed"
     },
     {
-      "journeyId": "journey-4",
-      "from": "东京",
-      "to": "广州",
-      "type": "international",
-      "flights": ["flight-4"]
+      "id": "journey-4",
+      "title": "东京 → 广州",
+      "status": "confirmed"
     }
   ],
   "flights": [
     {
-      "flightId": "flight-1",
-      "date": "2027-01-19",
+      "id": "flight-1",
+      "journeyId": "journey-1",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "全日空（ANA）",
+        "name": "ANA"
+      },
+      "operatedBy": null,
+      "operatedByFlightNumber": null,
       "flightNumber": "NH924",
-      "airline": "全日空（ANA）",
-      "from": {
-        "city": "广州",
+      "status": "confirmed",
+      "departure": {
+        "airportCode": "CAN",
         "airport": "广州白云机场",
-        "iata": "CAN",
-        "terminal": "T3"
+        "terminal": "T3",
+        "city": "广州",
+        "date": "2027-01-19",
+        "time": "15:05",
+        "utcOffset": "+08:00"
       },
-      "to": {
-        "city": "东京",
+      "arrival": {
+        "airportCode": "HND",
         "airport": "东京羽田机场",
-        "iata": "HND",
-        "terminal": null
+        "terminal": null,
+        "city": "东京",
+        "date": "2027-01-19",
+        "time": "20:00",
+        "utcOffset": "+09:00"
       },
-      "departureTime": "15:05",
-      "arrivalTime": "20:00",
       "durationMinutes": 295,
-      "status": "confirmed",
-      "seats": ["31A", "31C"],
+      "seats": [
+        "31A",
+        "31C"
+      ],
       "seatNote": "两人座位已选好且相邻",
       "baggage": {
         "checked": {
@@ -105,30 +127,44 @@
         },
         "carryOnTotalWeightKg": 10,
         "carryOnTotalNote": "随身行李与个人物品合计不超过10kg"
-      }
+      },
+      "connectionNote": null
     },
     {
-      "flightId": "flight-2",
-      "date": "2027-01-24",
+      "id": "flight-2",
+      "journeyId": "journey-2",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "全日空（ANA）",
+        "name": "ANA"
+      },
+      "operatedBy": null,
+      "operatedByFlightNumber": null,
       "flightNumber": "NH073",
-      "airline": "全日空（ANA）",
-      "from": {
-        "city": "东京",
-        "airport": "东京羽田机场",
-        "iata": "HND",
-        "terminal": "T2"
-      },
-      "to": {
-        "city": "札幌",
-        "airport": "新千岁机场",
-        "iata": "CTS",
-        "terminal": "D"
-      },
-      "departureTime": "17:00",
-      "arrivalTime": "18:35",
-      "durationMinutes": 95,
       "status": "confirmed",
-      "seats": ["26C", "26B"],
+      "departure": {
+        "airportCode": "HND",
+        "airport": "东京羽田机场",
+        "terminal": "T2",
+        "city": "东京",
+        "date": "2027-01-24",
+        "time": "17:00",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "CTS",
+        "airport": "新千岁机场",
+        "terminal": "D",
+        "city": "札幌",
+        "date": "2027-01-24",
+        "time": "18:35",
+        "utcOffset": "+09:00"
+      },
+      "durationMinutes": 95,
+      "seats": [
+        "26C",
+        "26B"
+      ],
       "seatNote": "两人座位已选好且相邻",
       "baggage": {
         "checked": {
@@ -146,32 +182,44 @@
         },
         "carryOnTotalWeightKg": 10,
         "carryOnTotalNote": "随身行李与个人物品合计不超过10kg"
-      }
+      },
+      "connectionNote": null
     },
     {
-      "flightId": "flight-3",
-      "date": "2027-01-29",
-      "flightNumber": "NH4744",
-      "airline": "全日空（ANA）",
+      "id": "flight-3",
+      "journeyId": "journey-3",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "全日空（ANA）",
+        "name": "ANA"
+      },
       "operatedBy": "Air Do",
       "operatedByFlightNumber": "HD044",
-      "from": {
-        "city": "札幌",
-        "airport": "新千岁机场",
-        "iata": "CTS",
-        "terminal": "D"
-      },
-      "to": {
-        "city": "东京",
-        "airport": "东京羽田机场",
-        "iata": "HND",
-        "terminal": "T2"
-      },
-      "departureTime": "21:45",
-      "arrivalTime": "23:30",
-      "durationMinutes": 105,
+      "flightNumber": "NH4744",
       "status": "confirmed",
-      "seats": ["2F", "2E"],
+      "departure": {
+        "airportCode": "CTS",
+        "airport": "新千岁机场",
+        "terminal": "D",
+        "city": "札幌",
+        "date": "2027-01-29",
+        "time": "21:45",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "HND",
+        "airport": "东京羽田机场",
+        "terminal": "T2",
+        "city": "东京",
+        "date": "2027-01-29",
+        "time": "23:30",
+        "utcOffset": "+09:00"
+      },
+      "durationMinutes": 105,
+      "seats": [
+        "2F",
+        "2E"
+      ],
       "seatNote": "两人座位已选好且相邻",
       "baggage": {
         "checked": {
@@ -193,27 +241,40 @@
       "connectionNote": "1月30日09:20羽田飞广州。两段航班行李不直挂，需提取行李后重新办理托运。夜间休息地点及次日值机柜台开放时间待确认。"
     },
     {
-      "flightId": "flight-4",
-      "date": "2027-01-30",
+      "id": "flight-4",
+      "journeyId": "journey-4",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "全日空（ANA）",
+        "name": "ANA"
+      },
+      "operatedBy": null,
+      "operatedByFlightNumber": null,
       "flightNumber": "NH923",
-      "airline": "全日空（ANA）",
-      "from": {
-        "city": "东京",
-        "airport": "东京羽田机场",
-        "iata": "HND",
-        "terminal": "T2"
-      },
-      "to": {
-        "city": "广州",
-        "airport": "广州白云机场",
-        "iata": "CAN",
-        "terminal": "T3"
-      },
-      "departureTime": "09:20",
-      "arrivalTime": "13:50",
-      "durationMinutes": 270,
       "status": "confirmed",
-      "seats": ["31A", "31C"],
+      "departure": {
+        "airportCode": "HND",
+        "airport": "东京羽田机场",
+        "terminal": "T2",
+        "city": "东京",
+        "date": "2027-01-30",
+        "time": "09:20",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "CAN",
+        "airport": "广州白云机场",
+        "terminal": "T3",
+        "city": "广州",
+        "date": "2027-01-30",
+        "time": "13:50",
+        "utcOffset": "+08:00"
+      },
+      "durationMinutes": 270,
+      "seats": [
+        "31A",
+        "31C"
+      ],
       "seatNote": "两人座位已选好且相邻",
       "baggage": {
         "checked": {
@@ -231,7 +292,8 @@
         },
         "carryOnTotalWeightKg": 10,
         "carryOnTotalNote": "随身行李与个人物品合计不超过10kg"
-      }
+      },
+      "connectionNote": null
     }
   ],
   "accommodations": [
@@ -250,10 +312,10 @@
       "payment": {
         "currency": "CNY",
         "paidOnline": 2226.99,
-        "paidOnlinePerPerson": 1113.50,
+        "paidOnlinePerPerson": 1113.5,
         "expectedOnSite": 0,
         "total": 2226.99,
-        "totalPerPerson": 1113.50,
+        "totalPerPerson": 1113.5,
         "paymentStatus": "已在线支付",
         "confirmationReceived": true,
         "confirmationNote": "订单确认邮件已收到并收藏"
@@ -273,11 +335,11 @@
       "breakfast": "不含早餐",
       "payment": {
         "currency": "CNY",
-        "paidOnline": 1923.20,
-        "paidOnlinePerPerson": 961.60,
-        "expectedOnSite": 125.70,
+        "paidOnline": 1923.2,
+        "paidOnlinePerPerson": 961.6,
+        "expectedOnSite": 125.7,
         "expectedOnSitePerPerson": 62.85,
-        "total": 2048.90,
+        "total": 2048.9,
         "totalPerPerson": 1024.45,
         "paymentStatus": "部分已支付，预计现场支付尾款",
         "confirmationReceived": true,
@@ -375,598 +437,737 @@
   },
   "days": [
     {
-      "dayId": "day-01",
+      "day": 1,
       "date": "2027-01-19",
-      "dayNumber": 1,
       "title": "抵达东京",
       "city": "东京",
       "summary": "广州起飞，抵达羽田机场，前往池袋酒店办理入住。",
-      "items": [
+      "locations": [
+        "羽田机场 → 池袋酒店",
+        "办理入住 池袋阳光城王子大饭店",
+        "吃晚饭"
+      ],
+      "schedule": [
         {
-          "type": "flight",
-          "title": "广州 → 东京 航班 NH924",
+          "id": "day-01-item-01",
           "time": "15:05—20:00",
-          "flightId": "flight-1",
-          "noNavigation": true
+          "type": "flight",
+          "text": "广州 → 东京 航班 NH924",
+          "flightId": "flight-1"
         },
         {
+          "id": "day-01-item-02",
+          "time": "",
           "type": "transfer",
-          "title": "羽田机场 → 池袋酒店",
-          "description": "交通参考约1000日元／人",
-          "costNote": "约1000日元／人"
+          "text": "羽田机场 → 池袋酒店。交通参考约1000日元／人；约1000日元／人"
         },
         {
+          "id": "day-01-item-03",
+          "time": "",
           "type": "check-in",
-          "title": "办理入住 池袋阳光城王子大饭店",
-          "accommodationId": "hotel-1"
+          "text": "办理入住 池袋阳光城王子大饭店"
         },
         {
+          "id": "day-01-item-04",
+          "time": "",
           "type": "restaurant",
-          "title": "吃晚饭",
-          "note": "附近餐饮"
+          "text": "吃晚饭。附近餐饮"
         },
         {
+          "id": "day-01-item-05",
+          "time": "",
           "type": "rest",
-          "title": "休息",
-          "noNavigation": true
+          "text": "休息"
         }
       ]
     },
     {
-      "dayId": "day-02",
+      "day": 2,
       "date": "2027-01-20",
-      "dayNumber": 2,
       "title": "浅草寺、东京塔、涩谷",
       "city": "东京",
       "summary": "浅草和服体验，浅草寺周边游玩，之后东京塔、涩谷P5R相关地点。",
-      "items": [
+      "locations": [
+        "池袋 → 浅草",
+        "花筏和服店预约",
+        "浅草寺及周边游玩",
+        "らぁめん めん○（店名待确认）",
+        "塩パン屋 パン・メゾン すみだ浅草通り",
+        "东京塔",
+        "涩谷"
+      ],
+      "schedule": [
         {
-          "type": "rest",
-          "title": "起床、化妆",
+          "id": "day-02-item-01",
           "time": "07:00",
-          "noNavigation": true
+          "type": "rest",
+          "text": "起床、化妆"
         },
         {
-          "type": "transfer",
-          "title": "池袋 → 浅草",
+          "id": "day-02-item-02",
           "time": "08:30",
-          "costNote": "交通参考约387日元"
+          "type": "transfer",
+          "text": "池袋 → 浅草。交通参考约387日元"
         },
         {
-          "type": "activity",
-          "title": "花筏和服店预约",
+          "id": "day-02-item-03",
           "time": "09:00",
-          "description": "预计选择和服、换装约1—1.5小时。和服预约邮件已收到，现场选择套餐并付款。未选择摄影服务。",
-          "note": "预约人数以订单为准，不要擅自认定两人都预约。准确人数及套餐待确认。",
-          "status": "已预约，现场付款"
+          "type": "activity",
+          "text": "花筏和服店预约。预计选择和服、换装约1—1.5小时。和服预约邮件已收到，现场选择套餐并付款。未选择摄影服务。；预约人数以订单为准，不要擅自认定两人都预约。准确人数及套餐待确认。；已预约，现场付款"
         },
         {
+          "id": "day-02-item-04",
+          "time": "预计15:00—16:00结束和服活动",
           "type": "attraction",
-          "title": "浅草寺及周边游玩",
-          "time": "预计15:00—16:00结束和服活动"
+          "text": "浅草寺及周边游玩"
         },
         {
+          "id": "day-02-item-05",
+          "time": "",
           "type": "restaurant",
-          "title": "らぁめん めん○（店名待确认）",
-          "note": "参考约500日元／碗",
-          "status": "店名尚未完整确认"
+          "text": "らぁめん めん○（店名待确认）。参考约500日元／碗；店名尚未完整确认"
         },
         {
+          "id": "day-02-item-06",
+          "time": "",
           "type": "restaurant",
-          "title": "塩パン屋 パン・メゾン すみだ浅草通り",
-          "status": "已收藏"
+          "text": "塩パン屋 パン・メゾン すみだ浅草通り。已收藏"
         },
         {
+          "id": "day-02-item-07",
+          "time": "",
           "type": "attraction",
-          "title": "东京塔",
-          "note": "和服活动结束后前往"
+          "text": "东京塔。和服活动结束后前往"
         },
         {
+          "id": "day-02-item-08",
+          "time": "",
           "type": "attraction",
-          "title": "涩谷",
-          "note": "安排《女神异闻录5》（P5R）相关地点"
+          "text": "涩谷。安排《女神异闻录5》（P5R）相关地点"
         }
       ]
     },
     {
-      "dayId": "day-03",
+      "day": 3,
       "date": "2027-01-21",
-      "dayNumber": 3,
       "title": "镰仓＋江之岛",
       "city": "镰仓·江之岛",
       "summary": "池袋出发前往藤泽，游览镰仓小町通、江之岛，体验江之岛电车。",
-      "items": [
+      "locations": [
+        "池袋 → 藤泽",
+        "镰仓小町通",
+        "江之岛",
+        "江之岛电车"
+      ],
+      "schedule": [
         {
+          "id": "day-03-item-01",
+          "time": "",
           "type": "rail",
-          "title": "池袋 → 藤泽",
-          "description": "考虑JR前往藤泽"
+          "text": "池袋 → 藤泽。考虑JR前往藤泽"
         },
         {
+          "id": "day-03-item-02",
+          "time": "",
           "type": "attraction",
-          "title": "镰仓小町通"
+          "text": "镰仓小町通"
         },
         {
+          "id": "day-03-item-03",
+          "time": "",
           "type": "attraction",
-          "title": "江之岛"
+          "text": "江之岛"
         },
         {
+          "id": "day-03-item-04",
+          "time": "",
           "type": "rail",
-          "title": "江之岛电车",
-          "description": "体验江之岛电车，考虑购买江之岛电车一日券。"
+          "text": "江之岛电车。体验江之岛电车，考虑购买江之岛电车一日券。"
         },
         {
+          "id": "day-03-item-05",
+          "time": "",
           "type": "note",
-          "title": "行程偏好",
-          "description": "倾向直接返回东京。不增加横滨行程，避免太疲惫。不希望购买会迫使自己按原路线返回的宽泛周游券。",
-          "noNavigation": true
+          "text": "行程偏好。倾向直接返回东京。不增加横滨行程，避免太疲惫。不希望购买会迫使自己按原路线返回的宽泛周游券。"
         }
       ]
     },
     {
-      "dayId": "day-04",
+      "day": 4,
       "date": "2027-01-22",
-      "dayNumber": 4,
       "title": "富士山一日游",
       "city": "富士山周边",
       "summary": "已选中候选一日游团，尚未预订，计划2026年12月预订。",
-      "items": [
+      "locations": [
+        "富士山一日游（候选团）"
+      ],
+      "schedule": [
         {
+          "id": "day-04-item-01",
+          "time": "",
           "type": "tour",
-          "title": "富士山一日游（候选团）",
-          "description": "已选中约268元人民币／人的候选团，两人合计约536元。集合地点：新宿西口。尚未预订，计划2026年12月预订。",
-          "possibleStops": ["山中湖", "忍野八海", "河口湖大石公园"],
-          "costNote": "约268元／人，两人约536元",
-          "status": "待预订",
-          "note": "最终路线以实际购买的团为准。不要写成已预订。"
+          "text": "富士山一日游（候选团）。已选中约268元人民币／人的候选团，两人合计约536元。集合地点：新宿西口。尚未预订，计划2026年12月预订。；最终路线以实际购买的团为准。不要写成已预订。；约268元／人，两人约536元；待预订；候选地点：山中湖、忍野八海、河口湖大石公园"
         }
       ]
     },
     {
-      "dayId": "day-05",
+      "day": 5,
       "date": "2027-01-23",
-      "dayNumber": 5,
       "title": "日暮里、秋叶原、银座",
       "city": "东京",
       "summary": "上午日暮里，下午秋叶原，晚上银座。",
-      "items": [
+      "locations": [
+        "日暮里",
+        "秋叶原",
+        "银座"
+      ],
+      "schedule": [
         {
+          "id": "day-05-item-01",
+          "time": "上午",
           "type": "attraction",
-          "title": "日暮里",
-          "time": "上午"
+          "text": "日暮里"
         },
         {
+          "id": "day-05-item-02",
+          "time": "下午",
           "type": "attraction",
-          "title": "秋叶原",
-          "time": "下午"
+          "text": "秋叶原"
         },
         {
+          "id": "day-05-item-03",
+          "time": "晚上",
           "type": "attraction",
-          "title": "银座",
-          "time": "晚上"
+          "text": "银座"
         }
       ]
     },
     {
-      "dayId": "day-06",
+      "day": 6,
       "date": "2027-01-24",
-      "dayNumber": 6,
       "title": "池袋＋前往北海道",
       "city": "东京 → 札幌",
       "summary": "白天池袋活动，退房后行李寄存，下午飞新千岁，前往札幌酒店入住。",
-      "items": [
+      "locations": [
+        "池袋白天活动",
+        "池袋阳光城王子大饭店退房",
+        "新千岁机场 → 札幌酒店",
+        "办理入住 札幌中岛公园威斯特酒店"
+      ],
+      "schedule": [
         {
+          "id": "day-06-item-01",
+          "time": "",
           "type": "activity",
-          "title": "池袋白天活动"
+          "text": "池袋白天活动"
         },
         {
+          "id": "day-06-item-02",
+          "time": "",
           "type": "check-out",
-          "title": "池袋阳光城王子大饭店退房",
-          "accommodationId": "hotel-1"
+          "text": "池袋阳光城王子大饭店退房"
         },
         {
+          "id": "day-06-item-03",
+          "time": "",
           "type": "note",
-          "title": "行李寄存",
-          "description": "方案1：询问池袋酒店是否允许退房后寄存。方案2：池袋站附近投币储物柜。",
-          "status": "待确认",
-          "noNavigation": true
+          "text": "行李寄存。方案1：询问池袋酒店是否允许退房后寄存。方案2：池袋站附近投币储物柜。；待确认"
         },
         {
-          "type": "flight",
-          "title": "东京 → 札幌 航班 NH073",
+          "id": "day-06-item-04",
           "time": "17:00—18:35",
-          "flightId": "flight-2",
-          "noNavigation": true
+          "type": "flight",
+          "text": "东京 → 札幌 航班 NH073",
+          "flightId": "flight-2"
         },
         {
+          "id": "day-06-item-05",
+          "time": "",
           "type": "transfer",
-          "title": "新千岁机场 → 札幌酒店"
+          "text": "新千岁机场 → 札幌酒店"
         },
         {
+          "id": "day-06-item-06",
+          "time": "",
           "type": "check-in",
-          "title": "办理入住 札幌中岛公园威斯特酒店",
-          "accommodationId": "hotel-2"
+          "text": "办理入住 札幌中岛公园威斯特酒店"
         }
       ]
     },
     {
-      "dayId": "day-07",
+      "day": 7,
       "date": "2027-01-25",
-      "dayNumber": 7,
       "title": "北海道神宫、白色恋人公园、札幌市区",
       "city": "札幌",
       "summary": "北海道神宫、白色恋人公园、札幌诹访神社、旧本厅舍、钟楼、电视塔、大通公园。",
-      "items": [
+      "locations": [
+        "北海道神宫",
+        "白色恋人公园",
+        "札幌诹访神社",
+        "北海道厅旧本厅舍",
+        "札幌市钟楼",
+        "札幌电视塔",
+        "大通公园"
+      ],
+      "schedule": [
         {
+          "id": "day-07-item-01",
+          "time": "",
           "type": "attraction",
-          "title": "北海道神宫"
+          "text": "北海道神宫"
         },
         {
+          "id": "day-07-item-02",
+          "time": "",
           "type": "attraction",
-          "title": "白色恋人公园",
-          "description": "冬季灯光活动：2026年12月1日至2027年3月31日。灯光时间16:00—19:00。户外灯光区域免费。心形灯光每小时15分和45分有彩色闪烁效果。2027年正值白色恋人50周年相关活动。",
-          "note": "出发前需要再次确认开放时间及天气。"
+          "text": "白色恋人公园。冬季灯光活动：2026年12月1日至2027年3月31日。灯光时间16:00—19:00。户外灯光区域免费。心形灯光每小时15分和45分有彩色闪烁效果。2027年正值白色恋人50周年相关活动。；出发前需要再次确认开放时间及天气。"
         },
         {
+          "id": "day-07-item-03",
+          "time": "",
           "type": "attraction",
-          "title": "札幌诹访神社"
+          "text": "札幌诹访神社"
         },
         {
+          "id": "day-07-item-04",
+          "time": "",
           "type": "attraction",
-          "title": "北海道厅旧本厅舍"
+          "text": "北海道厅旧本厅舍"
         },
         {
+          "id": "day-07-item-05",
+          "time": "",
           "type": "attraction",
-          "title": "札幌市钟楼"
+          "text": "札幌市钟楼"
         },
         {
+          "id": "day-07-item-06",
+          "time": "",
           "type": "attraction",
-          "title": "札幌电视塔"
+          "text": "札幌电视塔"
         },
         {
+          "id": "day-07-item-07",
+          "time": "",
           "type": "attraction",
-          "title": "大通公园"
+          "text": "大通公园"
         },
         {
+          "id": "day-07-item-08",
+          "time": "",
           "type": "note",
-          "title": "游览顺序",
-          "description": "当天具体游览顺序和时间尚未确定。",
-          "noNavigation": true
+          "text": "游览顺序。当天具体游览顺序和时间尚未确定。"
         }
       ]
     },
     {
-      "dayId": "day-08",
+      "day": 8,
       "date": "2027-01-26",
-      "dayNumber": 8,
       "title": "小樽＋钱函一日游",
       "city": "小樽·钱函",
       "summary": "札幌出发游览小樽、钱函，返回札幌。每段JR尽量购买实体车票。",
-      "items": [
+      "locations": [
+        "札幌 → 小樽",
+        "小樽",
+        "小樽 → 钱函",
+        "钱函",
+        "钱函 → 札幌"
+      ],
+      "schedule": [
         {
+          "id": "day-08-item-01",
+          "time": "",
           "type": "rail",
-          "title": "札幌 → 小樽",
-          "note": "希望保存实体纸质车票"
+          "text": "札幌 → 小樽。希望保存实体纸质车票"
         },
         {
+          "id": "day-08-item-02",
+          "time": "",
           "type": "attraction",
-          "title": "小樽"
+          "text": "小樽"
         },
         {
+          "id": "day-08-item-03",
+          "time": "",
           "type": "rail",
-          "title": "小樽 → 钱函",
-          "note": "希望保存实体纸质车票"
+          "text": "小樽 → 钱函。希望保存实体纸质车票"
         },
         {
+          "id": "day-08-item-04",
+          "time": "",
           "type": "attraction",
-          "title": "钱函"
+          "text": "钱函"
         },
         {
+          "id": "day-08-item-05",
+          "time": "",
           "type": "rail",
-          "title": "钱函 → 札幌",
-          "note": "希望保存实体纸质车票"
+          "text": "钱函 → 札幌。希望保存实体纸质车票"
         },
         {
+          "id": "day-08-item-06",
+          "time": "",
           "type": "note",
-          "title": "车票说明",
-          "description": "想确认车站是否能购买分段车票。不要默认全程刷Suica。",
-          "noNavigation": true
+          "text": "车票说明。想确认车站是否能购买分段车票。不要默认全程刷Suica。"
         }
       ]
     },
     {
-      "dayId": "day-09",
+      "day": 9,
       "date": "2027-01-27",
-      "dayNumber": 9,
       "title": "北海道大学＋狸小路",
       "city": "札幌",
       "summary": "白天游览北海道大学，之后前往狸小路购物。",
-      "items": [
+      "locations": [
+        "北海道大学",
+        "狸小路购物"
+      ],
+      "schedule": [
         {
+          "id": "day-09-item-01",
+          "time": "白天",
           "type": "attraction",
-          "title": "北海道大学",
-          "time": "白天"
+          "text": "北海道大学"
         },
         {
+          "id": "day-09-item-02",
+          "time": "之后",
           "type": "shopping",
-          "title": "狸小路购物",
-          "time": "之后"
+          "text": "狸小路购物"
         },
         {
+          "id": "day-09-item-03",
+          "time": "",
           "type": "note",
-          "title": "时间安排",
-          "description": "具体时间和餐饮待安排。",
-          "noNavigation": true
+          "text": "时间安排。具体时间和餐饮待安排。"
         }
       ]
     },
     {
-      "dayId": "day-10",
+      "day": 10,
       "date": "2027-01-28",
-      "dayNumber": 10,
       "title": "滑雪／玩雪＋温泉",
       "city": "札幌周边（待确认）",
       "summary": "两人均为滑雪初学者，偏好雪圈、雪橇、轻松玩雪项目，可考虑初级滑雪体验。地点尚未确认。",
-      "items": [
+      "locations": [
+        "玩雪项目（地点待确认）",
+        "温泉（地点待确认）"
+      ],
+      "schedule": [
         {
+          "id": "day-10-item-01",
+          "time": "",
           "type": "activity",
-          "title": "玩雪项目（地点待确认）",
-          "description": "两人均为滑雪初学者，没有滑雪经验。希望低成本、公共交通方便。更偏好雪圈、雪橇、轻松玩雪项目，可以考虑初级滑雪体验。",
-          "candidates": [
-            "泷野雪世界（Takino Snow World）——尚未确认",
-            "真驹内泷野灵园——附近游览候选，尚未确认"
-          ],
-          "status": "待确认"
+          "text": "玩雪项目（地点待确认）。两人均为滑雪初学者，没有滑雪经验。希望低成本、公共交通方便。更偏好雪圈、雪橇、轻松玩雪项目，可以考虑初级滑雪体验。；待确认；候选：泷野雪世界（Takino Snow World）——尚未确认；真驹内泷野灵园——附近游览候选，尚未确认"
         },
         {
+          "id": "day-10-item-02",
+          "time": "",
           "type": "activity",
-          "title": "温泉（地点待确认）",
-          "candidates": [
-            "定山溪温泉——尚未确认",
-            "丰平峡温泉——尚未确认"
-          ],
-          "status": "待确认"
+          "text": "温泉（地点待确认）。待确认；候选：定山溪温泉——尚未确认；丰平峡温泉——尚未确认"
         },
         {
+          "id": "day-10-item-03",
+          "time": "",
           "type": "note",
-          "title": "明确排除",
-          "description": "不去朝里。不去朝里川温泉滑雪场。",
-          "noNavigation": true
+          "text": "明确排除。不去朝里。不去朝里川温泉滑雪场。"
         }
       ]
     },
     {
-      "dayId": "day-11",
+      "day": 11,
       "date": "2027-01-29",
-      "dayNumber": 11,
       "title": "薄野＋狸小路＋返回东京",
       "city": "札幌 → 东京",
       "summary": "白天薄野、狸小路第二次购物，不要安排过于紧凑。晚上飞东京羽田。",
-      "items": [
+      "locations": [
+        "薄野",
+        "狸小路第二次购物",
+        "札幌中岛公园威斯特酒店退房"
+      ],
+      "schedule": [
         {
+          "id": "day-11-item-01",
+          "time": "白天",
           "type": "attraction",
-          "title": "薄野",
-          "time": "白天"
+          "text": "薄野"
         },
         {
+          "id": "day-11-item-02",
+          "time": "白天",
           "type": "shopping",
-          "title": "狸小路第二次购物",
-          "time": "白天"
+          "text": "狸小路第二次购物"
         },
         {
+          "id": "day-11-item-03",
+          "time": "",
           "type": "note",
-          "title": "节奏提醒",
-          "description": "不要安排得过于紧凑。",
-          "noNavigation": true
+          "text": "节奏提醒。不要安排得过于紧凑。"
         },
         {
+          "id": "day-11-item-04",
+          "time": "",
           "type": "check-out",
-          "title": "札幌中岛公园威斯特酒店退房",
-          "accommodationId": "hotel-2"
+          "text": "札幌中岛公园威斯特酒店退房"
         },
         {
-          "type": "flight",
-          "title": "札幌 → 东京 航班 NH4744（实际承运 Air Do HD044）",
+          "id": "day-11-item-05",
           "time": "21:45—23:30",
-          "flightId": "flight-3",
-          "noNavigation": true
+          "type": "flight",
+          "text": "札幌 → 东京 航班 NH4744（实际承运 Air Do HD044）",
+          "flightId": "flight-3"
         },
         {
+          "id": "day-11-item-06",
+          "time": "",
           "type": "note",
-          "title": "抵达后衔接",
-          "description": "23:30抵达东京羽田机场。需要提取行李，为次日国际航班重新办理托运。夜间休息地点及1月30日值机柜台开放时间待确认。",
-          "noNavigation": true
+          "text": "抵达后衔接。23:30抵达东京羽田机场。需要提取行李，为次日国际航班重新办理托运。夜间休息地点及1月30日值机柜台开放时间待确认。"
         }
       ]
     },
     {
-      "dayId": "day-12",
+      "day": 12,
       "date": "2027-01-30",
-      "dayNumber": 12,
       "title": "返回广州",
       "city": "东京 → 广州",
       "summary": "09:20羽田起飞，13:50抵达广州白云机场，日本旅行结束。",
-      "items": [
+      "locations": [],
+      "schedule": [
         {
-          "type": "flight",
-          "title": "东京 → 广州 航班 NH923",
+          "id": "day-12-item-01",
           "time": "09:20—13:50",
-          "flightId": "flight-4",
-          "noNavigation": true
+          "type": "flight",
+          "text": "东京 → 广州 航班 NH923",
+          "flightId": "flight-4"
         },
         {
+          "id": "day-12-item-02",
+          "time": "",
           "type": "note",
-          "title": "日本旅行结束",
-          "description": "13:50抵达广州白云机场。",
-          "noNavigation": true
+          "text": "日本旅行结束。13:50抵达广州白云机场。"
         }
       ]
     }
   ],
   "places": [
     {
-      "placeId": "place-asakusa",
       "name": "浅草寺",
       "city": "东京",
       "type": "attraction",
-      "days": ["day-02"]
+      "days": [
+        "day-02"
+      ],
+      "id": "place-asakusa"
     },
     {
-      "placeId": "place-tokyo-tower",
       "name": "东京塔",
       "city": "东京",
       "type": "attraction",
-      "days": ["day-02"]
+      "days": [
+        "day-02"
+      ],
+      "id": "place-tokyo-tower"
     },
     {
-      "placeId": "place-shibuya",
       "name": "涩谷",
       "city": "东京",
       "type": "attraction",
       "note": "《女神异闻录5》（P5R）相关地点",
-      "days": ["day-02"]
+      "days": [
+        "day-02"
+      ],
+      "id": "place-shibuya"
     },
     {
-      "placeId": "place-kamakura-komachi",
       "name": "镰仓小町通",
       "city": "镰仓",
       "type": "attraction",
-      "days": ["day-03"]
+      "days": [
+        "day-03"
+      ],
+      "id": "place-kamakura-komachi"
     },
     {
-      "placeId": "place-enoshima",
       "name": "江之岛",
       "city": "江之岛",
       "type": "attraction",
-      "days": ["day-03"]
+      "days": [
+        "day-03"
+      ],
+      "id": "place-enoshima"
     },
     {
-      "placeId": "place-nippori",
       "name": "日暮里",
       "city": "东京",
       "type": "attraction",
-      "days": ["day-05"]
+      "days": [
+        "day-05"
+      ],
+      "id": "place-nippori"
     },
     {
-      "placeId": "place-akihabara",
       "name": "秋叶原",
       "city": "东京",
       "type": "attraction",
-      "days": ["day-05"]
+      "days": [
+        "day-05"
+      ],
+      "id": "place-akihabara"
     },
     {
-      "placeId": "place-ginza",
       "name": "银座",
       "city": "东京",
       "type": "attraction",
-      "days": ["day-05"]
+      "days": [
+        "day-05"
+      ],
+      "id": "place-ginza"
     },
     {
-      "placeId": "place-ikebukuro",
       "name": "池袋",
       "city": "东京",
       "type": "area",
-      "days": ["day-01", "day-06"]
+      "days": [
+        "day-01",
+        "day-06"
+      ],
+      "id": "place-ikebukuro"
     },
     {
-      "placeId": "place-hokkaido-jingu",
       "name": "北海道神宫",
       "city": "札幌",
       "type": "attraction",
-      "days": ["day-07"]
+      "days": [
+        "day-07"
+      ],
+      "id": "place-hokkaido-jingu"
     },
     {
-      "placeId": "place-shiroi-koibito-park",
       "name": "白色恋人公园",
       "city": "札幌",
       "type": "attraction",
-      "days": ["day-07"],
-      "note": "冬季灯光活动 2026-12-01 至 2027-03-31，灯光时间 16:00—19:00，户外灯光区免费。"
+      "days": [
+        "day-07"
+      ],
+      "note": "冬季灯光活动 2026-12-01 至 2027-03-31，灯光时间 16:00—19:00，户外灯光区免费。",
+      "id": "place-shiroi-koibito-park"
     },
     {
-      "placeId": "place-sapporo-suwa-shrine",
       "name": "札幌诹访神社",
       "city": "札幌",
       "type": "attraction",
-      "days": ["day-07"]
+      "days": [
+        "day-07"
+      ],
+      "id": "place-sapporo-suwa-shrine"
     },
     {
-      "placeId": "place-former-hokkaido-gov",
       "name": "北海道厅旧本厅舍",
       "city": "札幌",
       "type": "attraction",
-      "days": ["day-07"]
+      "days": [
+        "day-07"
+      ],
+      "id": "place-former-hokkaido-gov"
     },
     {
-      "placeId": "place-sapporo-clock-tower",
       "name": "札幌市钟楼",
       "city": "札幌",
       "type": "attraction",
-      "days": ["day-07"]
+      "days": [
+        "day-07"
+      ],
+      "id": "place-sapporo-clock-tower"
     },
     {
-      "placeId": "place-sapporo-tv-tower",
       "name": "札幌电视塔",
       "city": "札幌",
       "type": "attraction",
-      "days": ["day-07"]
+      "days": [
+        "day-07"
+      ],
+      "id": "place-sapporo-tv-tower"
     },
     {
-      "placeId": "place-odori-park",
       "name": "大通公园",
       "city": "札幌",
       "type": "attraction",
-      "days": ["day-07"]
+      "days": [
+        "day-07"
+      ],
+      "id": "place-odori-park"
     },
     {
-      "placeId": "place-otaru",
       "name": "小樽",
       "city": "小樽",
       "type": "attraction",
-      "days": ["day-08"]
+      "days": [
+        "day-08"
+      ],
+      "id": "place-otaru"
     },
     {
-      "placeId": "place-zenso",
       "name": "钱函",
       "city": "钱函",
       "type": "attraction",
-      "days": ["day-08"]
+      "days": [
+        "day-08"
+      ],
+      "id": "place-zenso"
     },
     {
-      "placeId": "place-hokkaido-univ",
       "name": "北海道大学",
       "city": "札幌",
       "type": "attraction",
-      "days": ["day-09"]
+      "days": [
+        "day-09"
+      ],
+      "id": "place-hokkaido-univ"
     },
     {
-      "placeId": "place-tanukikoji",
       "name": "狸小路",
       "city": "札幌",
       "type": "shopping",
-      "days": ["day-09", "day-11"]
+      "days": [
+        "day-09",
+        "day-11"
+      ],
+      "id": "place-tanukikoji"
     },
     {
-      "placeId": "place-susukino",
       "name": "薄野",
       "city": "札幌",
       "type": "area",
-      "days": ["day-11"]
+      "days": [
+        "day-11"
+      ],
+      "id": "place-susukino"
     },
     {
-      "placeId": "place-haneda",
       "name": "东京羽田机场",
       "city": "东京",
       "type": "airport",
       "iata": "HND",
-      "days": ["day-01", "day-02", "day-04", "day-06", "day-11", "day-12"]
+      "days": [
+        "day-01",
+        "day-02",
+        "day-04",
+        "day-06",
+        "day-11",
+        "day-12"
+      ],
+      "id": "place-haneda"
     },
     {
-      "placeId": "place-new-chitose",
       "name": "新千岁机场",
       "city": "札幌",
       "type": "airport",
       "iata": "CTS",
-      "days": ["day-06", "day-11"]
+      "days": [
+        "day-06",
+        "day-11"
+      ],
+      "id": "place-new-chitose"
     }
   ],
   "restaurants": [
@@ -1000,7 +1201,8 @@
         "candidatePricePerPerson": 268,
         "candidatePriceCurrency": "CNY",
         "candidateTotalForTwo": 536,
-        "note": "已选中候选团，计划2026年12月预订。集合地点新宿西口。最终路线以实际购买的团为准。不要写成已预订。"
+        "note": "已选中候选团，计划2026年12月预订。集合地点新宿西口。最终路线以实际购买的团为准。不要写成已预订。",
+        "day": 4
       },
       {
         "ticketId": "ticket-2",
@@ -1008,7 +1210,8 @@
         "type": "experience",
         "date": "2027-01-20",
         "status": "已预约，现场付款",
-        "note": "和服预约邮件已收到，现场选择套餐并付款。未选择摄影服务。预约人数以订单为准。"
+        "note": "和服预约邮件已收到，现场选择套餐并付款。未选择摄影服务。预约人数以订单为准。",
+        "day": 2
       },
       {
         "ticketId": "ticket-3",
@@ -1016,7 +1219,8 @@
         "type": "transit-pass",
         "date": "2027-01-21",
         "status": "待确认是否购买",
-        "note": "考虑购买江之岛电车一日券。"
+        "note": "考虑购买江之岛电车一日券。",
+        "day": 3
       },
       {
         "ticketId": "ticket-4",
@@ -1024,7 +1228,8 @@
         "type": "attraction",
         "date": "2027-01-25",
         "status": "待确认",
-        "note": "户外灯光区域免费。出发前再次确认开放时间及天气。"
+        "note": "户外灯光区域免费。出发前再次确认开放时间及天气。",
+        "day": 7
       },
       {
         "ticketId": "ticket-5",
@@ -1032,7 +1237,8 @@
         "type": "activity",
         "date": "2027-01-28",
         "status": "待确认",
-        "note": "候选：泷野雪世界、真驹内泷野灵园。两人均为滑雪初学者，偏好雪圈、雪橇等轻松玩雪项目。"
+        "note": "候选：泷野雪世界、真驹内泷野灵园。两人均为滑雪初学者，偏好雪圈、雪橇等轻松玩雪项目。",
+        "day": 10
       },
       {
         "ticketId": "ticket-6",
@@ -1040,7 +1246,8 @@
         "type": "activity",
         "date": "2027-01-28",
         "status": "待确认",
-        "note": "候选：定山溪温泉、丰平峡温泉。"
+        "note": "候选：定山溪温泉、丰平峡温泉。",
+        "day": 10
       }
     ]
   },
@@ -1048,40 +1255,49 @@
     "packingItems": [
       {
         "id": "pack-1",
-        "name": "护照收纳包",
         "category": "证件收纳",
         "budget": "50元人民币以内",
         "note": "长款设计，需要横向票据收纳空间。放置护照、长条登机牌、现金、银行卡、SIM卡、照片和日本硬币。希望旅行结束后也能长期使用。",
-        "status": "待购买"
+        "status": "待购买",
+        "text": "护照收纳包",
+        "completed": false
       },
       {
         "id": "pack-2",
-        "name": "充电设备",
         "category": "电子设备",
-        "items": ["手机（iPhone 16 Pro）", "CCD相机", "充电宝"],
+        "items": [
+          "手机（iPhone 16 Pro）",
+          "CCD相机",
+          "充电宝"
+        ],
         "note": "需要确认充电器在日本的电压、插头及功率兼容性。",
-        "status": "待确认兼容性"
+        "status": "待确认兼容性",
+        "text": "充电设备",
+        "completed": false
       },
       {
         "id": "pack-3",
-        "name": "行李箱",
         "category": "行李",
         "note": "需确认两人实际携带的行李箱数量、尺寸和重量。",
-        "status": "待确认"
+        "status": "待确认",
+        "text": "行李箱",
+        "completed": false
       },
       {
         "id": "pack-4",
-        "name": "日本实体SIM卡",
         "category": "通讯",
         "note": "两人都计划购买。品牌和流量套餐尚未确定。",
-        "status": "待购买"
+        "status": "待购买",
+        "text": "日本实体SIM卡",
+        "completed": false
       },
       {
         "id": "pack-5",
-        "name": "日元现金",
         "category": "支付",
         "note": "出发前准备札幌酒店预计现场支付的125.70元人民币对应日元。",
-        "status": "待准备"
+        "status": "待准备",
+        "text": "日元现金",
+        "completed": false
       }
     ],
     "preparationsExplicitlyMentioned": [
@@ -1310,7 +1526,7 @@
         "date": "2027-01-19",
         "currency": "CNY",
         "amount": 2226.99,
-        "amountPerPerson": 1113.50,
+        "amountPerPerson": 1113.5,
         "category": "住宿",
         "paymentStatus": "已在线支付",
         "shared": true
@@ -1320,8 +1536,8 @@
         "title": "札幌中岛公园酒店（5晚，已付部分）",
         "date": "2027-01-24",
         "currency": "CNY",
-        "amount": 1923.20,
-        "amountPerPerson": 961.60,
+        "amount": 1923.2,
+        "amountPerPerson": 961.6,
         "category": "住宿",
         "paymentStatus": "已在线支付",
         "shared": true
@@ -1331,7 +1547,7 @@
         "title": "札幌酒店预计现场支付（尾款，可能含住宿税）",
         "date": "2027-01-24",
         "currency": "CNY",
-        "amount": 125.70,
+        "amount": 125.7,
         "amountPerPerson": 62.85,
         "category": "住宿",
         "paymentStatus": "预计现场支付，尚未支付",
@@ -1358,7 +1574,15 @@
       "hotelsTotalPerPerson": 2137.95,
       "hotelsNote": "两家酒店预计总计4275.89元，每人约2137.95元。含札幌预计现场支付125.70元（尚未支付）。"
     },
-    "categories": ["餐饮", "交通", "购物", "门票", "住宿", "活动", "其他"],
+    "categories": [
+      "餐饮",
+      "交通",
+      "购物",
+      "门票",
+      "住宿",
+      "活动",
+      "其他"
+    ],
     "dailyStatistics": {
       "enabled": true,
       "note": "支持每日消费统计、新增、修改、删除消费记录。"
@@ -1368,9 +1592,1561 @@
     "schemaVersion": "1.0-lite",
     "mapMode": "template-auto",
     "templateId": "auto",
-    "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
-    "places": [],
-    "routes": [],
-    "dailyRoutes": []
-  }
-}
+    "disclaimer": "本图为模板化行程示意图，仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+    "region": {
+      "id": "japan-trip",
+      "label": "日本",
+      "countryCode": "JP",
+      "title": "日本旅行路线示意图",
+      "description": "东京、镰仓、富士山周边与北海道行程示意。"
+    },
+    "places": [
+      {
+        "id": "place-asakusa",
+        "name": "浅草寺",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.68,
+          "lng": 139.76
+        }
+      },
+      {
+        "id": "place-tokyo-tower",
+        "name": "东京塔",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.68,
+          "lng": 139.76
+        }
+      },
+      {
+        "id": "place-shibuya",
+        "name": "涩谷",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.68,
+          "lng": 139.76
+        }
+      },
+      {
+        "id": "place-kamakura-komachi",
+        "name": "镰仓小町通",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.32,
+          "lng": 139.55
+        }
+      },
+      {
+        "id": "place-enoshima",
+        "name": "江之岛",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.3,
+          "lng": 139.48
+        }
+      },
+      {
+        "id": "place-nippori",
+        "name": "日暮里",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.68,
+          "lng": 139.76
+        }
+      },
+      {
+        "id": "place-akihabara",
+        "name": "秋叶原",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.68,
+          "lng": 139.76
+        }
+      },
+      {
+        "id": "place-ginza",
+        "name": "银座",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.68,
+          "lng": 139.76
+        }
+      },
+      {
+        "id": "place-ikebukuro",
+        "name": "池袋",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.68,
+          "lng": 139.76
+        }
+      },
+      {
+        "id": "place-hokkaido-jingu",
+        "name": "北海道神宫",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-shiroi-koibito-park",
+        "name": "白色恋人公园",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-sapporo-suwa-shrine",
+        "name": "札幌诹访神社",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-former-hokkaido-gov",
+        "name": "北海道厅旧本厅舍",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-sapporo-clock-tower",
+        "name": "札幌市钟楼",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-sapporo-tv-tower",
+        "name": "札幌电视塔",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-odori-park",
+        "name": "大通公园",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-otaru",
+        "name": "小樽",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.19,
+          "lng": 140.99
+        }
+      },
+      {
+        "id": "place-zenso",
+        "name": "钱函",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.14,
+          "lng": 141.16
+        }
+      },
+      {
+        "id": "place-hokkaido-univ",
+        "name": "北海道大学",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-tanukikoji",
+        "name": "狸小路",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-susukino",
+        "name": "薄野",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      },
+      {
+        "id": "place-haneda",
+        "name": "东京羽田机场",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 35.68,
+          "lng": 139.76
+        }
+      },
+      {
+        "id": "place-new-chitose",
+        "name": "新千岁机场",
+        "countryCode": "JP",
+        "geo": {
+          "lat": 43.06,
+          "lng": 141.35
+        }
+      }
+    ],
+    "routes": [
+      {
+        "day": 1,
+        "placeIds": [
+          "place-haneda",
+          "place-ikebukuro"
+        ]
+      },
+      {
+        "day": 2,
+        "placeIds": [
+          "place-ikebukuro",
+          "place-asakusa",
+          "place-tokyo-tower",
+          "place-shibuya"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "place-ikebukuro",
+          "place-kamakura-komachi",
+          "place-enoshima"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "place-shibuya",
+          "place-ginza"
+        ]
+      },
+      {
+        "day": 5,
+        "placeIds": [
+          "place-nippori",
+          "place-akihabara",
+          "place-ginza"
+        ]
+      },
+      {
+        "day": 6,
+        "placeIds": [
+          "place-ikebukuro",
+          "place-new-chitose"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "place-hokkaido-jingu",
+          "place-shiroi-koibito-park",
+          "place-sapporo-suwa-shrine",
+          "place-former-hokkaido-gov",
+          "place-sapporo-clock-tower",
+          "place-sapporo-tv-tower",
+          "place-odori-park"
+        ]
+      },
+      {
+        "day": 8,
+        "placeIds": [
+          "place-otaru",
+          "place-zenso"
+        ]
+      },
+      {
+        "day": 9,
+        "placeIds": [
+          "place-hokkaido-univ",
+          "place-tanukikoji"
+        ]
+      },
+      {
+        "day": 10,
+        "placeIds": [
+          "place-tanukikoji",
+          "place-susukino"
+        ]
+      },
+      {
+        "day": 11,
+        "placeIds": [
+          "place-susukino",
+          "place-tanukikoji"
+        ]
+      },
+      {
+        "day": 12,
+        "placeIds": [
+          "place-haneda",
+          "place-ikebukuro"
+        ]
+      }
+    ],
+    "dailyRoutes": [
+      {
+        "day": 1,
+        "placeIds": [
+          "place-haneda",
+          "place-ikebukuro"
+        ]
+      },
+      {
+        "day": 2,
+        "placeIds": [
+          "place-ikebukuro",
+          "place-asakusa",
+          "place-tokyo-tower",
+          "place-shibuya"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "place-ikebukuro",
+          "place-kamakura-komachi",
+          "place-enoshima"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "place-shibuya",
+          "place-ginza"
+        ]
+      },
+      {
+        "day": 5,
+        "placeIds": [
+          "place-nippori",
+          "place-akihabara",
+          "place-ginza"
+        ]
+      },
+      {
+        "day": 6,
+        "placeIds": [
+          "place-ikebukuro",
+          "place-new-chitose"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "place-hokkaido-jingu",
+          "place-shiroi-koibito-park",
+          "place-sapporo-suwa-shrine",
+          "place-former-hokkaido-gov",
+          "place-sapporo-clock-tower",
+          "place-sapporo-tv-tower",
+          "place-odori-park"
+        ]
+      },
+      {
+        "day": 8,
+        "placeIds": [
+          "place-otaru",
+          "place-zenso"
+        ]
+      },
+      {
+        "day": 9,
+        "placeIds": [
+          "place-hokkaido-univ",
+          "place-tanukikoji"
+        ]
+      },
+      {
+        "day": 10,
+        "placeIds": [
+          "place-tanukikoji",
+          "place-susukino"
+        ]
+      },
+      {
+        "day": 11,
+        "placeIds": [
+          "place-susukino",
+          "place-tanukikoji"
+        ]
+      },
+      {
+        "day": 12,
+        "placeIds": [
+          "place-haneda",
+          "place-ikebukuro"
+        ]
+      }
+    ]
+  },
+  "routeMap": {
+    "defaultRegionId": "japan-trip",
+    "regions": [
+      {
+        "id": "japan-trip",
+        "label": "日本",
+        "countryCode": "JP",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "upland-basin",
+        "mapModeReason": "dense-place-cluster",
+        "mapModeMetrics": {
+          "placeCount": 23,
+          "geoPlaceCount": 23,
+          "widthKm": 159.41,
+          "heightKm": 875.79,
+          "spanKm": 886.87,
+          "averageNearestKm": 1.88,
+          "components": 4,
+          "largestLegKm": 831.88,
+          "jumpRatio": 831.88
+        },
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-06-upland-basin.webp",
+        "title": "日本旅行路线示意图",
+        "ariaLabel": "日本模板化旅行路线示意图，共12天",
+        "description": "东京、镰仓、富士山周边与北海道行程示意。",
+        "disclaimer": "本图为模板化行程示意图，仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "日本",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 1,
+            "color": "#397dc1",
+            "placeIds": [
+              "place-haneda",
+              "place-ikebukuro"
+            ],
+            "paths": [
+              "M841.71 789.25 C819.8 798.4 797.2 800.9 775.25 796.57"
+            ],
+            "overviewPaths": [
+              "M841.71 789.25 C819.8 798.4 797.2 800.9 775.25 796.57"
+            ]
+          },
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "place-ikebukuro",
+              "place-asakusa",
+              "place-tokyo-tower",
+              "place-shibuya"
+            ],
+            "paths": [
+              "M775.25 796.57 C783.4 818.6 796.9 836.6 814.94 849.61 C799.4 811.8 795.4 772.7 803.03 734.81 C816.8 779.9 841.6 817.6 876.1 845.82"
+            ],
+            "overviewPaths": [
+              "M775.25 796.57 C804.6 823.4 838.9 840.1 876.1 845.82"
+            ]
+          },
+          {
+            "day": 3,
+            "color": "#618344",
+            "placeIds": [
+              "place-ikebukuro",
+              "place-kamakura-komachi",
+              "place-enoshima"
+            ],
+            "paths": [
+              "M775.25 796.57 C758.1 781.3 746.5 762.6 741.08 741.62 C732.0 781.2 734.4 820.1 748.05 856"
+            ],
+            "overviewPaths": [
+              "M775.25 796.57 C771.9 819.5 762.7 839.7 748.05 856"
+            ]
+          },
+          {
+            "day": 4,
+            "color": "#209aaa",
+            "placeIds": [
+              "place-shibuya",
+              "place-ginza"
+            ],
+            "paths": [
+              "M876.1 845.82 C892.0 828.5 902.0 808.2 905.39 786.12"
+            ],
+            "overviewPaths": [
+              "M876.1 845.82 C892.0 828.5 902.0 808.2 905.39 786.12"
+            ]
+          },
+          {
+            "day": 5,
+            "color": "#8865a5",
+            "placeIds": [
+              "place-nippori",
+              "place-akihabara",
+              "place-ginza"
+            ],
+            "paths": [
+              "M868.41 728.65 C822.2 768.5 768.9 792.6 711.6 799.64 C778.8 814.4 844.7 809.8 905.39 786.12"
+            ],
+            "overviewPaths": [
+              "M868.41 728.65 C886.7 744.5 899.3 764.0 905.39 786.12"
+            ]
+          },
+          {
+            "day": 6,
+            "color": "#df6185",
+            "placeIds": [
+              "place-ikebukuro",
+              "place-new-chitose"
+            ],
+            "paths": [
+              "M775.25 796.57 C858.5 614.3 913.0 423.7 935.33 236.15"
+            ],
+            "overviewPaths": [
+              "M775.25 796.57 C858.5 614.3 913.0 423.7 935.33 236.15"
+            ]
+          },
+          {
+            "day": 7,
+            "color": "#397dc1",
+            "placeIds": [
+              "place-hokkaido-jingu",
+              "place-shiroi-koibito-park",
+              "place-sapporo-suwa-shrine",
+              "place-former-hokkaido-gov",
+              "place-sapporo-clock-tower",
+              "place-sapporo-tv-tower",
+              "place-odori-park"
+            ],
+            "paths": [
+              "M892.88 349.78 C922.1 281.1 967.5 225.7 1026.57 187.04 C968.9 188.7 916.3 205.8 871.83 237.45 C876.9 216.2 887.4 198.0 902.59 184 C870.4 217.9 850.0 257.9 842.49 301.52 C872.9 249.2 915.1 209.2 966.49 184 C955.3 224.7 956.0 265.3 968.57 303.23"
+            ],
+            "overviewPaths": [
+              "M892.88 349.78 C914.0 326.4 939.7 310.6 968.57 303.23"
+            ]
+          },
+          {
+            "day": 8,
+            "color": "#e77e22",
+            "placeIds": [
+              "place-otaru",
+              "place-zenso"
+            ],
+            "paths": [
+              "M809.6 247.21 C874.4 264.5 938.7 262.9 998.71 242.46"
+            ],
+            "overviewPaths": [
+              "M809.6 247.21 C874.4 264.5 938.7 262.9 998.71 242.46"
+            ]
+          },
+          {
+            "day": 9,
+            "color": "#618344",
+            "placeIds": [
+              "place-hokkaido-univ",
+              "place-tanukikoji"
+            ],
+            "paths": [
+              "M775.74 188.46 C828.5 211.7 870.9 247.3 900.22 293.28"
+            ],
+            "overviewPaths": [
+              "M775.74 188.46 C828.5 211.7 870.9 247.3 900.22 293.28"
+            ]
+          },
+          {
+            "day": 10,
+            "color": "#209aaa",
+            "placeIds": [
+              "place-tanukikoji",
+              "place-susukino"
+            ],
+            "paths": [
+              "M900.22 293.28 C891.4 250.3 871.7 213.2 842.14 184"
+            ],
+            "overviewPaths": [
+              "M900.22 293.28 C891.4 250.3 871.7 213.2 842.14 184"
+            ]
+          },
+          {
+            "day": 11,
+            "color": "#8865a5",
+            "placeIds": [
+              "place-susukino",
+              "place-tanukikoji"
+            ],
+            "paths": [
+              "M842.14 184 C872.8 215.3 892.6 252.5 900.22 293.28"
+            ],
+            "overviewPaths": [
+              "M842.14 184 C872.8 215.3 892.6 252.5 900.22 293.28"
+            ]
+          },
+          {
+            "day": 12,
+            "color": "#df6185",
+            "placeIds": [
+              "place-haneda",
+              "place-ikebukuro"
+            ],
+            "paths": [
+              "M841.71 789.25 C818.4 785.1 795.8 787.6 775.25 796.57"
+            ],
+            "overviewPaths": [
+              "M841.71 789.25 C818.4 785.1 795.8 787.6 775.25 796.57"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "place-asakusa",
+            "x": 814.94,
+            "y": 849.61,
+            "color": "#e77e22",
+            "tx": 846.94,
+            "ty": 899.61,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "浅草寺"
+            ],
+            "query": "浅草寺 日本",
+            "geo": {
+              "lat": 35.68,
+              "lng": 139.76
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "place-tokyo-tower",
+            "x": 803.03,
+            "y": 734.81,
+            "color": "#e77e22",
+            "tx": 881.03,
+            "ty": 672.81,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "东京塔"
+            ],
+            "query": "东京塔 日本",
+            "geo": {
+              "lat": 35.68,
+              "lng": 139.76
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "place-shibuya",
+            "x": 876.1,
+            "y": 845.82,
+            "color": "#e77e22",
+            "tx": 954.1,
+            "ty": 783.82,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "涩谷"
+            ],
+            "query": "涩谷 日本",
+            "geo": {
+              "lat": 35.68,
+              "lng": 139.76
+            },
+            "days": [
+              2,
+              4
+            ]
+          },
+          {
+            "id": "place-kamakura-komachi",
+            "x": 741.08,
+            "y": 741.62,
+            "color": "#618344",
+            "tx": 663.08,
+            "ty": 679.62,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "镰仓小町通"
+            ],
+            "query": "镰仓小町通 日本",
+            "geo": {
+              "lat": 35.32,
+              "lng": 139.55
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "place-enoshima",
+            "x": 748.05,
+            "y": 856,
+            "color": "#618344",
+            "tx": 610.05,
+            "ty": 768,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "江之岛"
+            ],
+            "query": "江之岛 日本",
+            "geo": {
+              "lat": 35.3,
+              "lng": 139.48
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "place-nippori",
+            "x": 868.41,
+            "y": 728.65,
+            "color": "#8865a5",
+            "tx": 900.41,
+            "ty": 696.65,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "日暮里"
+            ],
+            "query": "日暮里 日本",
+            "geo": {
+              "lat": 35.68,
+              "lng": 139.76
+            },
+            "days": [
+              5
+            ]
+          },
+          {
+            "id": "place-akihabara",
+            "x": 711.6,
+            "y": 799.64,
+            "color": "#8865a5",
+            "tx": 679.6,
+            "ty": 849.64,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "秋叶原"
+            ],
+            "query": "秋叶原 日本",
+            "geo": {
+              "lat": 35.68,
+              "lng": 139.76
+            },
+            "days": [
+              5
+            ]
+          },
+          {
+            "id": "place-ginza",
+            "x": 905.39,
+            "y": 786.12,
+            "color": "#209aaa",
+            "tx": 1043.39,
+            "ty": 888.12,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "银座"
+            ],
+            "query": "银座 日本",
+            "geo": {
+              "lat": 35.68,
+              "lng": 139.76
+            },
+            "days": [
+              4,
+              5
+            ]
+          },
+          {
+            "id": "place-ikebukuro",
+            "x": 775.25,
+            "y": 796.57,
+            "color": "#397dc1",
+            "tx": 697.25,
+            "ty": 872.57,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "池袋"
+            ],
+            "query": "池袋 日本",
+            "geo": {
+              "lat": 35.68,
+              "lng": 139.76
+            },
+            "days": [
+              1,
+              2,
+              3,
+              6,
+              12
+            ]
+          },
+          {
+            "id": "place-hokkaido-jingu",
+            "x": 892.88,
+            "y": 349.78,
+            "color": "#397dc1",
+            "tx": 814.88,
+            "ty": 425.78,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "北海道神宫"
+            ],
+            "query": "北海道神宫 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "place-shiroi-koibito-park",
+            "x": 1026.57,
+            "y": 187.04,
+            "color": "#397dc1",
+            "tx": 1164.57,
+            "ty": 99.04,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "白色恋人公园"
+            ],
+            "query": "白色恋人公园 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "place-sapporo-suwa-shrine",
+            "x": 871.83,
+            "y": 237.45,
+            "color": "#397dc1",
+            "tx": 1009.83,
+            "ty": 339.45,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "札幌诹访神社"
+            ],
+            "query": "札幌诹访神社 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "place-former-hokkaido-gov",
+            "x": 902.59,
+            "y": 184,
+            "color": "#397dc1",
+            "tx": 980.59,
+            "ty": 122,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "北海道厅旧本厅舍"
+            ],
+            "query": "北海道厅旧本厅舍 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "place-sapporo-clock-tower",
+            "x": 842.49,
+            "y": 301.52,
+            "color": "#397dc1",
+            "tx": 810.49,
+            "ty": 351.52,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "札幌市钟楼"
+            ],
+            "query": "札幌市钟楼 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "place-sapporo-tv-tower",
+            "x": 966.49,
+            "y": 184,
+            "color": "#397dc1",
+            "tx": 1044.49,
+            "ty": 260,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "札幌电视塔"
+            ],
+            "query": "札幌电视塔 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "place-odori-park",
+            "x": 968.57,
+            "y": 303.23,
+            "color": "#397dc1",
+            "tx": 1106.57,
+            "ty": 405.23,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "大通公园"
+            ],
+            "query": "大通公园 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "place-otaru",
+            "x": 809.6,
+            "y": 247.21,
+            "color": "#e77e22",
+            "tx": 671.6,
+            "ty": 159.21,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "小樽"
+            ],
+            "query": "小樽 日本",
+            "geo": {
+              "lat": 43.19,
+              "lng": 140.99
+            },
+            "days": [
+              8
+            ]
+          },
+          {
+            "id": "place-zenso",
+            "x": 998.71,
+            "y": 242.46,
+            "color": "#e77e22",
+            "tx": 1076.71,
+            "ty": 180.46,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "钱函"
+            ],
+            "query": "钱函 日本",
+            "geo": {
+              "lat": 43.14,
+              "lng": 141.16
+            },
+            "days": [
+              8
+            ]
+          },
+          {
+            "id": "place-hokkaido-univ",
+            "x": 775.74,
+            "y": 188.46,
+            "color": "#618344",
+            "tx": 743.74,
+            "ty": 238.46,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "北海道大学"
+            ],
+            "query": "北海道大学 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              9
+            ]
+          },
+          {
+            "id": "place-tanukikoji",
+            "x": 900.22,
+            "y": 293.28,
+            "color": "#618344",
+            "tx": 868.22,
+            "ty": 343.28,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "狸小路"
+            ],
+            "query": "狸小路 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              9,
+              10,
+              11
+            ]
+          },
+          {
+            "id": "place-susukino",
+            "x": 842.14,
+            "y": 184,
+            "color": "#209aaa",
+            "tx": 704.14,
+            "ty": 96,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "薄野"
+            ],
+            "query": "薄野 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              10,
+              11
+            ]
+          },
+          {
+            "id": "place-haneda",
+            "x": 841.71,
+            "y": 789.25,
+            "color": "#397dc1",
+            "tx": 703.71,
+            "ty": 701.25,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "东京羽田机场"
+            ],
+            "query": "东京羽田机场 日本",
+            "geo": {
+              "lat": 35.68,
+              "lng": 139.76
+            },
+            "days": [
+              1,
+              12
+            ]
+          },
+          {
+            "id": "place-new-chitose",
+            "x": 935.33,
+            "y": 236.15,
+            "color": "#df6185",
+            "tx": 1073.33,
+            "ty": 338.15,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "新千岁机场"
+            ],
+            "query": "新千岁机场 日本",
+            "geo": {
+              "lat": 43.06,
+              "lng": 141.35
+            },
+            "days": [
+              6
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "place-haneda",
+          "place-ikebukuro",
+          "place-shibuya",
+          "place-enoshima",
+          "place-ginza",
+          "place-new-chitose",
+          "place-hokkaido-jingu",
+          "place-hokkaido-univ",
+          "place-tanukikoji",
+          "place-susukino"
+        ],
+        "dailyLayouts": {
+          "1": {
+            "places": [
+              "place-haneda",
+              "place-ikebukuro"
+            ],
+            "labels": {
+              "place-haneda": {
+                "x": 703.71,
+                "y": 701.25,
+                "anchor": "end"
+              },
+              "place-ikebukuro": {
+                "x": 697.25,
+                "y": 872.57,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 808.48,
+                "y": 792.91
+              }
+            ]
+          },
+          "2": {
+            "places": [
+              "place-ikebukuro",
+              "place-asakusa",
+              "place-tokyo-tower",
+              "place-shibuya"
+            ],
+            "labels": {
+              "place-ikebukuro": {
+                "x": 697.25,
+                "y": 872.57,
+                "anchor": "end"
+              },
+              "place-asakusa": {
+                "x": 846.94,
+                "y": 899.61,
+                "anchor": "start"
+              },
+              "place-tokyo-tower": {
+                "x": 881.03,
+                "y": 672.81,
+                "anchor": "start"
+              },
+              "place-shibuya": {
+                "x": 954.1,
+                "y": 783.82,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 795.1,
+                "y": 823.09
+              },
+              {
+                "items": [],
+                "x": 808.99,
+                "y": 792.21
+              },
+              {
+                "items": [],
+                "x": 839.57,
+                "y": 790.32
+              }
+            ]
+          },
+          "3": {
+            "places": [
+              "place-ikebukuro",
+              "place-kamakura-komachi",
+              "place-enoshima"
+            ],
+            "labels": {
+              "place-ikebukuro": {
+                "x": 697.25,
+                "y": 872.57,
+                "anchor": "end"
+              },
+              "place-kamakura-komachi": {
+                "x": 663.08,
+                "y": 679.62,
+                "anchor": "end"
+              },
+              "place-enoshima": {
+                "x": 610.05,
+                "y": 768,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 758.16,
+                "y": 769.1
+              },
+              {
+                "items": [],
+                "x": 744.57,
+                "y": 798.81
+              }
+            ]
+          },
+          "4": {
+            "places": [
+              "place-shibuya",
+              "place-ginza"
+            ],
+            "labels": {
+              "place-shibuya": {
+                "x": 954.1,
+                "y": 783.82,
+                "anchor": "start"
+              },
+              "place-ginza": {
+                "x": 1043.39,
+                "y": 888.12,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 890.75,
+                "y": 815.97
+              }
+            ]
+          },
+          "5": {
+            "places": [
+              "place-nippori",
+              "place-akihabara",
+              "place-ginza"
+            ],
+            "labels": {
+              "place-nippori": {
+                "x": 900.41,
+                "y": 696.65,
+                "anchor": "start"
+              },
+              "place-akihabara": {
+                "x": 679.6,
+                "y": 849.64,
+                "anchor": "end"
+              },
+              "place-ginza": {
+                "x": 1043.39,
+                "y": 888.12,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 790,
+                "y": 764.14
+              },
+              {
+                "items": [],
+                "x": 808.5,
+                "y": 792.88
+              }
+            ]
+          },
+          "6": {
+            "places": [
+              "place-ikebukuro",
+              "place-new-chitose"
+            ],
+            "labels": {
+              "place-ikebukuro": {
+                "x": 697.25,
+                "y": 872.57,
+                "anchor": "end"
+              },
+              "place-new-chitose": {
+                "x": 1073.33,
+                "y": 338.15,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 855.29,
+                "y": 516.36
+              }
+            ]
+          },
+          "7": {
+            "places": [
+              "place-hokkaido-jingu",
+              "place-shiroi-koibito-park",
+              "place-sapporo-suwa-shrine",
+              "place-former-hokkaido-gov",
+              "place-sapporo-clock-tower",
+              "place-sapporo-tv-tower",
+              "place-odori-park"
+            ],
+            "labels": {
+              "place-hokkaido-jingu": {
+                "x": 814.88,
+                "y": 425.78,
+                "anchor": "end"
+              },
+              "place-shiroi-koibito-park": {
+                "x": 1164.57,
+                "y": 99.04,
+                "anchor": "start"
+              },
+              "place-sapporo-suwa-shrine": {
+                "x": 1009.83,
+                "y": 339.45,
+                "anchor": "start"
+              },
+              "place-former-hokkaido-gov": {
+                "x": 980.59,
+                "y": 122,
+                "anchor": "start"
+              },
+              "place-sapporo-clock-tower": {
+                "x": 810.49,
+                "y": 351.52,
+                "anchor": "end"
+              },
+              "place-sapporo-tv-tower": {
+                "x": 1044.49,
+                "y": 260,
+                "anchor": "start"
+              },
+              "place-odori-park": {
+                "x": 1106.57,
+                "y": 405.23,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 959.72,
+                "y": 268.41
+              },
+              {
+                "items": [],
+                "x": 949.2,
+                "y": 212.25
+              },
+              {
+                "items": [],
+                "x": 887.21,
+                "y": 210.72
+              },
+              {
+                "items": [],
+                "x": 872.54,
+                "y": 242.76
+              },
+              {
+                "items": [],
+                "x": 904.49,
+                "y": 242.76
+              },
+              {
+                "items": [],
+                "x": 967.53,
+                "y": 243.62
+              }
+            ]
+          },
+          "8": {
+            "places": [
+              "place-otaru",
+              "place-zenso"
+            ],
+            "labels": {
+              "place-otaru": {
+                "x": 671.6,
+                "y": 159.21,
+                "anchor": "end"
+              },
+              "place-zenso": {
+                "x": 1076.71,
+                "y": 180.46,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 904.15,
+                "y": 244.84
+              }
+            ]
+          },
+          "9": {
+            "places": [
+              "place-hokkaido-univ",
+              "place-tanukikoji"
+            ],
+            "labels": {
+              "place-hokkaido-univ": {
+                "x": 743.74,
+                "y": 238.46,
+                "anchor": "end"
+              },
+              "place-tanukikoji": {
+                "x": 868.22,
+                "y": 343.28,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 837.98,
+                "y": 240.87
+              }
+            ]
+          },
+          "10": {
+            "places": [
+              "place-tanukikoji",
+              "place-susukino"
+            ],
+            "labels": {
+              "place-tanukikoji": {
+                "x": 868.22,
+                "y": 343.28,
+                "anchor": "end"
+              },
+              "place-susukino": {
+                "x": 704.14,
+                "y": 96,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 871.18,
+                "y": 238.64
+              }
+            ]
+          },
+          "11": {
+            "places": [
+              "place-susukino",
+              "place-tanukikoji"
+            ],
+            "labels": {
+              "place-susukino": {
+                "x": 704.14,
+                "y": 96,
+                "anchor": "end"
+              },
+              "place-tanukikoji": {
+                "x": 868.22,
+                "y": 343.28,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 871.18,
+                "y": 238.64
+              }
+            ]
+          },
+          "12": {
+            "places": [
+              "place-haneda",
+              "place-ikebukuro"
+            ],
+            "labels": {
+              "place-haneda": {
+                "x": 703.71,
+                "y": 701.25,
+                "anchor": "end"
+              },
+              "place-ikebukuro": {
+                "x": 697.25,
+                "y": 872.57,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 808.48,
+                "y": 792.91
+              }
+            ]
+          }
+        }
+      }
+    ]
